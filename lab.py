@@ -30,7 +30,8 @@ def interactive():
 
 def main():
     args = usage()
-    tool = args.tool
+    if args.tool:
+        #labTools(args.tool)
 
 if __name__ == "__main__":
     try:
