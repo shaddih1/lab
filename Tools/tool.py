@@ -17,11 +17,10 @@ class LabTools:
                 action()
             else:
                 print("Error")
+                break
 
-    def me():
+    def me(self):
         print("MEEE")
-        exit(0)
 
-    def use():
+    def use(self):
         print("MEEEERRR")
-        exit(0)
