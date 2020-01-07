@@ -5,7 +5,7 @@
 import sys, argparse, os
 
 # local lab classes
-from Tools.tool import LabTools
+from modules.helper import LabTools
 
 # check user
 if os.geteuid() != 0:
@@ -28,10 +28,9 @@ def interactive():
 def main():
     args = usage()
     if args.tool:
+        # Fire!
         lab = LabTools()
         lab.start(args.tool)
-    else:
-        exit()
 
 if __name__ == "__main__":
     try:
