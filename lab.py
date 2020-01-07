@@ -5,7 +5,7 @@
 import sys, argparse, os
 
 # local lab classes
-from Tools import tools
+from Tools.tool import LabTools
 
 # check user
 if os.geteuid() != 0:
