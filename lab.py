@@ -10,6 +10,7 @@ if sys.version_info < 3:
     sys.exit(0)
 
 # local lab classes
+from Tools import tools
 
 # check user
 if os.geteuid() != 0:
@@ -27,11 +28,15 @@ def usage():
 def interactive():
     # lab = labTools()
     # lab.start()
+    print("bye")
 
 def main():
     args = usage()
     if args.tool:
-        #labTools(args.tool)
+        lab = LabTools()
+        lab.start(args.tool)
+    else:
+        exit()
 
 if __name__ == "__main__":
     try:
