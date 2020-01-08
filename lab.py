@@ -20,13 +20,24 @@ def usage():
         interactive()
     return parser.parse_args()
 
-def interactive():
-    # lab = labTools()
-    # lab.start()
-    print("bye")
+def header(quiet):
+    if not quiet:
+        print("""
+ ██▓    ▄▄▄       ▄▄▄▄      
+▓██▒   ▒████▄    ▓█████▄
+▒██░   ▒██  ▀█▄  ▒██▒ ▄██
+▒██░   ░██▄▄▄▄██ ▒██░█▀
+░██████▒▓█   ▓██▒░▓█  ▀█▓
+░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
+░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░
+  ░ ░    ░   ▒    ░    ░
+    ░  ░     ░  ░ ░
+                       ░
+                         """)
 
 def main():
     args = usage()
+    header(args.quiet)
     if args.tool:
         # Fire!
         lab = LabTools()
