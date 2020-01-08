@@ -10,7 +10,6 @@ from modules.helper import LabTools
 # check user
 if os.geteuid() != 0:
     print("\nLab must be run with root privileges.\n")
-    sys.exit(0)
 
 def usage():
     parser = argparse.ArgumentParser(description="")
@@ -23,16 +22,17 @@ def usage():
 def header(quiet):
     if not quiet:
         print("""
- ██▓    ▄▄▄       ▄▄▄▄      
-▓██▒   ▒████▄    ▓█████▄
-▒██░   ▒██  ▀█▄  ▒██▒ ▄██
-▒██░   ░██▄▄▄▄██ ▒██░█▀
-░██████▒▓█   ▓██▒░▓█  ▀█▓
-░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
-░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░
-  ░ ░    ░   ▒    ░    ░
-    ░  ░     ░  ░ ░
-                       ░
+                            Script
+ ██▓    ▄▄▄       ▄▄▄▄      Coded by: Shady H
+▓██▒   ▒████▄    ▓█████▄    Version : v0.1
+▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Twitter: @ShaddiH1
+▒██░   ░██▄▄▄▄██ ▒██░█▀     IP:
+░██████▒▓█   ▓██▒░▓█  ▀█▓   Local IP:
+░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Tor:
+░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root:
+  ░ ░    ░   ▒    ░    ░    Os:
+    ░  ░     ░  ░ ░         Kernel:
+                       ░    Python:
                          """)
 
 def main():
