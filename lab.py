@@ -10,7 +10,7 @@ from core.helper import LabTools
 def usage():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument("-q", "--quiet", help="suppress war", action="store_true")
-    parser.add_argument("option", choces=['enable_tor','disable_tor','tools','view_mac','change_mac','metasploit','more'],
+    parser.add_argument("option", choices=['enable_tor','disable_tor','tools','view_mac','change_mac','metasploit','more'],
         help="set a option to start")
     if len(sys.argv) < 2:
         pass

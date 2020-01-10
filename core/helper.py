@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from options import *
+from core.options import *
 
 class LabTools:
 
