@@ -5,7 +5,7 @@
 import sys, argparse, os
 
 # local lab classes
-from modules.helper import LabTools
+from core.helper import LabTools
 
 def usage():
     parser = argparse.ArgumentParser(description="")
