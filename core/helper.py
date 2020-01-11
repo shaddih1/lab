@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# standar python library
 import os, platform, time
 
 class LabTools:
@@ -12,6 +13,7 @@ class LabTools:
             "view_mac" : self.view_mac,
             "change_mac" : self.change_mac,
             "metasploit" : self.metasploit,
+            "updates" : self.updates,
             "more" : self.more
         }
 
@@ -40,7 +42,7 @@ class LabTools:
             print(f"\nTor has been disabled at {date}")
         else:
             print(f"\nThis option does not work on {system}\n")
-            
+
     def tools(self):
         print(3)
 
@@ -53,5 +55,8 @@ class LabTools:
     def metasploit(self):
         print(6)
 
-    def more(self):
+    def updates(self):
         print(7)
+
+    def more(self):
+        print(8)

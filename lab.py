@@ -6,6 +6,7 @@ import sys, argparse, os
 
 # local lab classes
 from core.helper import LabTools
+from core.added import *
 
 def usage():
     parser = argparse.ArgumentParser(description="")
@@ -18,15 +19,15 @@ def usage():
 
 def header(quiet):
     if not quiet:
-        print("""
+        print(f"""
  ██▓    ▄▄▄       ▄▄▄▄      By: Shady H
 ▓██▒   ▒████▄    ▓█████▄    Version : v0.1
 ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Twitter: @ShaddiH1
 ▒██░   ░██▄▄▄▄██ ▒██░█▀     IP:
 ░██████▒▓█   ▓██▒░▓█  ▀█▓   Local IP:
-░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Root:   Tor:
-░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Os:
-  ░ ░    ░   ▒    ░    ░    Tor:
+░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Root: {root()}
+░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    platform: {system()}
+  ░ ░    ░   ▒    ░    ░    Tor: {tor()}
     ░  ░     ░  ░ ░
                        ░""")
 
