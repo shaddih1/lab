@@ -23,8 +23,8 @@ def header(quiet):
  ██▓    ▄▄▄       ▄▄▄▄      By: Shady H
 ▓██▒   ▒████▄    ▓█████▄    Version : v0.1
 ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Twitter: @ShaddiH1
-▒██░   ░██▄▄▄▄██ ▒██░█▀     IP:
-░██████▒▓█   ▓██▒░▓█  ▀█▓   Local IP:
+▒██░   ░██▄▄▄▄██ ▒██░█▀     IP: {myip()}
+░██████▒▓█   ▓██▒░▓█  ▀█▓   Local IP: {local_ip()}
 ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Root: {root()}
 ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    platform: {system()}
   ░ ░    ░   ▒    ░    ░    Tor: {tor()}

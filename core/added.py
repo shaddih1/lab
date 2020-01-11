@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# standar python library
-import platform, os
+import platform, os, socket
+from requests import get
 
 def system():
     system = platform.platform()
@@ -19,7 +19,6 @@ def tor():
 
 def root():
     try:
-        # check user
         if os.geteuid() == 0:
             root = "●green"
         elif os.geteuid() != 0:
@@ -28,3 +27,20 @@ def root():
         root = "-"
 
     return root
+
+def local_ip():
+    try:
+        hostname = socket.gethostname()
+        local_ip = socket.gethostbyname(hostname)
+    except:
+        local_ip = "127.0.0.1"
+
+    return local_ip
+
+def myip():
+    try:
+        myip = get('https://api.ipify.org').text
+    except:
+        myip = "-"
+
+    return myip
