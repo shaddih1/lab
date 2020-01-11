@@ -19,7 +19,6 @@ class LabTools:
 
             if action:
                 action()
-            else:
                 break
 
     def enable_tor(self):
