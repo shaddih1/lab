@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os, platform, time
+
 class LabTools:
 
     def __init__(self):
@@ -22,11 +24,23 @@ class LabTools:
                 break
 
     def enable_tor(self):
-        print("1")
+        system = platform.system()
+        time = time.ctime(time.time())
+        if system == "Linux":
+            os.system('service tor start')
+            print(f"\nTor has been activaded at {time}")
+        else:
+            print(f"\nThis option does not work on {system}\n")
 
     def disable_tor(self):
-        print("2")
-
+        system = platform.system()
+        date = time.ctime(time.time())
+        if system == "Linux":
+            os.system('sudo service tor stop')
+            print(f"\nTor has been disabled at {date}")
+        else:
+            print(f"\nThis option does not work on {system}\n")
+            
     def tools(self):
         print(3)
 

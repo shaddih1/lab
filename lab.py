@@ -28,8 +28,7 @@ def header(quiet):
 ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Os:
   ░ ░    ░   ▒    ░    ░    Tor:
     ░  ░     ░  ░ ░
-                       ░
-                         """)
+                       ░""")
 
 def main():
     args = usage()
