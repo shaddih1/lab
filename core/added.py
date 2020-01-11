@@ -13,7 +13,7 @@ def tor():
     if system == "Linux":
         status = os.system('service tor status | head -3 | tail -1 | cut -c 13-29')
     else:
-        status = "-"
+        status = "Not supported"
 
     return status
 
@@ -24,7 +24,7 @@ def root():
         elif os.geteuid() != 0:
             root =  "●red"
     except:
-        root = "-"
+        root = "Not supported"
 
     return root
 
@@ -41,6 +41,6 @@ def myip():
     try:
         myip = get('https://api.ipify.org').text
     except:
-        myip = "-"
+        myip = "Not supported"
 
     return myip
