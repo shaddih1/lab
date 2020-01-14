@@ -27,10 +27,10 @@ class LabTools:
 
     def enable_tor(self):
         system = platform.system()
-        time = time.ctime(time.time())
+        date = time.ctime(time.time())
         if system == "Linux":
             os.system('service tor start')
-            print(f"\nTor has been activaded at {time}\n")
+            print(f"\nTor has been activaded at {date}\n")
         else:
             print(f"\nThis option does not work on {system}\n")
 
