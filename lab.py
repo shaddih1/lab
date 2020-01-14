@@ -14,7 +14,8 @@ def usage():
     parser.add_argument("option", choices=['enable_tor','disable_tor','tools','view_mac','change_mac','metasploit','more'],
         help="set a option to start")
     if len(sys.argv) < 2:
-        pass
+        header()
+        pass # coming soon
     return parser.parse_args()
 
 def header(quiet):
