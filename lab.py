@@ -14,23 +14,22 @@ def usage():
     parser.add_argument("option", choices=['enable_tor','disable_tor','tools','view_mac','change_mac','metasploit','more'],
         help="set a option to start")
     if len(sys.argv) < 2:
-        header()
-        pass # coming soon
+        pass
     return parser.parse_args()
 
 def header(quiet):
     if not quiet:
         print(f"""
- ██▓    ▄▄▄       ▄▄▄▄      By: Shady H
-▓██▒   ▒████▄    ▓█████▄    Version : v0.1
-▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Twitter: @ShaddiH1
-▒██░   ░██▄▄▄▄██ ▒██░█▀     IP: {myip()}
-░██████▒▓█   ▓██▒░▓█  ▀█▓   Local IP: {local_ip()}
-░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Root: {root()}
-░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    platform: {system()}
-  ░ ░    ░   ▒    ░    ░    Tor: {tor()}
-    ░  ░     ░  ░ ░
-                       ░""")
+  ██▓    ▄▄▄       ▄▄▄▄      
+ ▓██▒   ▒████▄    ▓█████▄    By: Shady H
+ ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Version : v0.0.1
+ ▒██░   ░██▄▄▄▄██ ▒██░█▀     Twitter: @ShaddiH1
+ ░██████▒▓█   ▓██▒░▓█  ▀█▓   IP: {myip()}
+ ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Local IP: {local_ip()}
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root: {root()} Tor: {tor()}
+   ░ ░    ░   ▒    ░    ░    Platform: {system()}
+     ░  ░     ░  ░ ░
+                        ░""")
 
 def main():
     args = usage()
