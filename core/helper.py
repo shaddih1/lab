@@ -30,18 +30,18 @@ class LabTools:
         date = time.ctime(time.time())
         if system == "Linux":
             os.system('service tor start')
-            print(f"\nTor has been activaded at {date}\n")
+            print(f"\n[+] Tor has been activaded at {date}\n")
         else:
-            print(f"\nThis option does not work on {system}\n")
+            print(f"\n[!] This option does not work on {system}\n")
 
     def disable_tor(self):
         system = platform.system()
         date = time.ctime(time.time())
         if system == "Linux":
             os.system('sudo service tor stop')
-            print(f"\nTor has been disabled at {date}\n")
+            print(f"\n[+] Tor has been disabled at {date}\n")
         else:
-            print(f"\nThis option does not work on {system}\n")
+            print(f"\n[!] This option does not work on {system}\n")
 
     def tools(self):
         print(3)
