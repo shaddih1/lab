@@ -5,7 +5,7 @@
 import sys, argparse, os
 
 # local lab classes
-from core.helper import LabTools
+from lib.common import orchestra
 from core.added import *
 
 def usage():
@@ -16,7 +16,7 @@ def usage():
         ,help="set an option to start")
     parser.add_argument("--list-options", action="store_true", default=False
         ,help="List Lab's options")
-        
+
     return parser.parse_args()
 
 def header(quiet):
@@ -38,7 +38,7 @@ def main():
     header(args.quiet)
     if args.option:
         # Fire!
-        lab = LabTools()
+        lab = LabConductor()
         lab.start(args.option)
 
 if __name__ == "__main__":

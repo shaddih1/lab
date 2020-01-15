@@ -3,7 +3,7 @@
 # standar python library
 import os, platform, time
 
-class LabTools:
+class LabConductor:
 
     def __init__(self):
         self.tools = {
@@ -24,6 +24,9 @@ class LabTools:
             if action:
                 action()
                 break
+            else:
+                print("Error")
+                sys.exit(0)
 
     def enable_tor(self):
         system = platform.system()
