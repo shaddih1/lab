@@ -6,7 +6,7 @@ import sys, argparse, os
 
 # local lab classes
 from lib.common import orchestra
-from core.added import *
+from lib.common import completer
 
 def usage():
     """where we parse all our arguments"""
