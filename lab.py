@@ -9,12 +9,14 @@ from core.helper import LabTools
 from core.added import *
 
 def usage():
-    parser = argparse.ArgumentParser(description="")
+    """where we parse all our arguments"""
+    parser = argparse.ArgumentParser(description="[*] Lab - Simplify your life - Ethical Hacking tool")
     parser.add_argument("-q", "--quiet", help="suppress war", action="store_true")
-    parser.add_argument("option", choices=['enable_tor','disable_tor','tools','view_mac','change_mac','metasploit','more'],
-        help="set a option to start")
-    if len(sys.argv) < 2:
-        pass
+    parser.add_argument("--option", metavar="OPTION", default=None
+        ,help="set an option to start")
+    parser.add_argument("--list-options", action="store_true", default=False
+        ,help="List Lab's options")
+        
     return parser.parse_args()
 
 def header(quiet):
@@ -26,7 +28,7 @@ def header(quiet):
  ▒██░   ░██▄▄▄▄██ ▒██░█▀     Twitter: @ShaddiH1
  ░██████▒▓█   ▓██▒░▓█  ▀█▓   IP: {myip()}
  ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Local IP: {local_ip()}
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root: {root()} Tools: 
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root: {root()} Tools:
    ░ ░    ░   ▒    ░    ░    Platform: {system()}
      ░  ░     ░  ░ ░         Tor: {tor()}
                         ░""")
