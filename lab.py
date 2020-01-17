@@ -39,7 +39,7 @@ def header(quiet):
 
 def main():
 	args = usage()
-	
+	header(args.quiet)
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
