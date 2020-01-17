@@ -4,6 +4,11 @@
 # standar python library+
 import sys, argparse, os
 
+# python3
+if sys.version_info.major < 3:
+	print("\nLab supports only python3.\n")
+	exit(0)
+
 # local lab classes
 from lib.common import orchestra
 from lib.common.completer import HeaderCompleter
