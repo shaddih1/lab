@@ -10,7 +10,7 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 
 # local lab classes
 from lib.common import orchestra
-from lib.common.completer import HeaderCompleter
+from lib.common import completer
 
 def usage():
     """where we parse all our arguments"""
@@ -25,7 +25,8 @@ def usage():
 
 def main():
     args = usage()
-    HeaderCompleter.header(args.quiet)
+    completer = HeaderCompleter()
+    completer.header(args.quiet)
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
