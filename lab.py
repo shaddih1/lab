@@ -21,7 +21,7 @@ def usage():
     parser.add_argument("--list-options", action="store_true", default=False
         ,help="List Lab's options")
 	if len(sys.argv) < 2:
-		pass 
+		pass
     return parser.parse_args()
 
 def header(quiet):
