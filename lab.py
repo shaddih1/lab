@@ -25,7 +25,7 @@ def usage():
 
 def main():
     args = usage()
-    header(args.quiet)
+    HeaderCompleter.header(args.quiet)
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
