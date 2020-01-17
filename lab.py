@@ -40,10 +40,11 @@ def header(quiet):
 def main():
 	args = usage()
 	header(args.quiet)
-    if args.option:
-        # Fire!
-        lab = orchestra.LabConductor()
-        lab.start(args.option)
+	if args.option:
+		 # Fire!
+		 lab = orchestra.LabConductor()
+		 lab.start(args.option)
+
 
 if __name__ == "__main__":
     try:
