@@ -5,7 +5,7 @@
 import sys, argparse, os
 
 if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
-	print("\nKickSploit supports only python3.6 or higher\n")
+	print("\nLab supports only python3.6 or higher\n")
 	sys.exit(0)
 
 # local lab classes
@@ -33,7 +33,7 @@ def header(quiet):
  ▒██░   ░██▄▄▄▄██ ▒██░█▀		  by Shady H | @ShaddiH1
  ░██████▒▓█   ▓██▒░▓█  ▀█▓
  ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life 
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
    ░ ░    ░   ▒    ░    ░
      ░  ░     ░  ░ ░
                         ░""")
