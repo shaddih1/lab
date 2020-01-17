@@ -10,7 +10,7 @@ from lib.common.completer import HeaderCompleter
 
 def usage():
     """where we parse all our arguments"""
-    parser = argparse.ArgumentParser(description="[*] Lab - Simplify your life - Ethical Hacking tool")
+    parser = argparse.ArgumentParser(description="Lab - Simplify your life - Ethical Hacking tool")
     parser.add_argument("-q", "--quiet", help="suppress war", action="store_true")
     parser.add_argument("--option", metavar="OPTION", default=None
         ,help="set an option to start")
@@ -38,7 +38,7 @@ def main():
     header(args.quiet)
     if args.option:
         # Fire!
-        lab = LabConductor()
+        lab = orchestra.LabConductor()
         lab.start(args.option)
 
 if __name__ == "__main__":
