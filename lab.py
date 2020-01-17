@@ -14,19 +14,33 @@ from lib.common import completer
 
 def usage():
     """where we parse all our arguments"""
-    parser = argparse.ArgumentParser(description="Lab - Simplify your life - Ethical Hacking tool")
-    parser.add_argument("-q", "--quiet", help="suppress war", action="store_true")
+    parser = argparse.ArgumentParser(description="Lab | Simplify your life | Ethical Hacking tool")
+    parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
     parser.add_argument("--option", metavar="OPTION", default=None
         ,help="set an option to start")
     parser.add_argument("--list-options", action="store_true", default=False
         ,help="List Lab's options")
+	if len(sys.argv) < 2:
 
     return parser.parse_args()
 
+def header(quiet):
+	if not quiet:
+		print("""
+  ██▓    ▄▄▄       ▄▄▄▄
+ ▓██▒   ▒████▄    ▓█████▄
+ ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v0.0.1 | Ethical Hacking Toolkit
+ ▒██░   ░██▄▄▄▄██ ▒██░█▀		  by Shady H | @ShaddiH1
+ ░██████▒▓█   ▓██▒░▓█  ▀█▓
+ ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life 
+   ░ ░    ░   ▒    ░    ░
+     ░  ░     ░  ░ ░
+                        ░""")
+
 def main():
     args = usage()
-    completer = HeaderCompleter()
-    completer.header(args.quiet)
+	header(args.quiet)
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
