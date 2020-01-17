@@ -23,20 +23,6 @@ def usage():
 
     return parser.parse_args()
 
-def header(quiet):
-    if not quiet:
-        print(f"""
-  ██▓    ▄▄▄       ▄▄▄▄
- ▓██▒   ▒████▄    ▓█████▄    By: Shady H
- ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Version : v0.0.1
- ▒██░   ░██▄▄▄▄██ ▒██░█▀     Twitter: @ShaddiH1
- ░██████▒▓█   ▓██▒░▓█  ▀█▓   IP: {myip()}
- ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Local IP: {local_ip()}
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root: {root()} Tools:
-   ░ ░    ░   ▒    ░    ░    Platform: {system()}
-     ░  ░     ░  ░ ░         Tor: {tor()}
-                        ░""")
-
 def main():
     args = usage()
     header(args.quiet)

@@ -5,6 +5,21 @@ import platform, os, socket
 from requests import get
 
 class HeaderCompleter:
+
+    def header(quiet):
+        if not quiet:
+            print(f"""
+  ██▓    ▄▄▄       ▄▄▄▄
+ ▓██▒   ▒████▄    ▓█████▄    By: Shady H
+ ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   Version : v0.0.1
+ ▒██░   ░██▄▄▄▄██ ▒██░█▀     Twitter: @ShaddiH1
+ ░██████▒▓█   ▓██▒░▓█  ▀█▓   IP: {myip()}
+ ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒   Local IP: {local_ip()}
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░    Root: {root()} Tools:
+   ░ ░    ░   ▒    ░    ░    Platform: {system()}
+     ░  ░     ░  ░ ░         Tor: {tor()}
+                        ░""")
+                        
     def system():
         # get the platform
         system = platform.platform()
