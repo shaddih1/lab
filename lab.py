@@ -6,7 +6,7 @@ import sys, argparse, os
 
 # local lab classes
 from lib.common import orchestra
-from lib.common import completer
+from lib.common.completer import HeaderCompleter
 
 def usage():
     """where we parse all our arguments"""

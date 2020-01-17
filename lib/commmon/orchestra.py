@@ -23,7 +23,6 @@ class LabConductor:
 
             if action:
                 action()
-                break
             else:
                 print("Error")
                 sys.exit(0)
