@@ -23,10 +23,10 @@ class LabConductor:
 
             if action:
                 action()
-                break 
+                break
             else:
                 print("Error")
-                sys.exit(0)
+                break
 
     def enable_tor(self):
         system = platform.system()
