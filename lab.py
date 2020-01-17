@@ -38,8 +38,8 @@ def header(quiet):
                         ░""")
 
 def main():
-    args = usage()
-	header(args.quiet)
+	args = usage()
+	
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
