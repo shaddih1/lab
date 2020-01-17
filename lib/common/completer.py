@@ -19,7 +19,7 @@ class HeaderCompleter:
    ░ ░    ░   ▒    ░    ░    Platform: {system()}
      ░  ░     ░  ░ ░         Tor: {tor()}
                         ░""")
-                        
+
     def system():
         # get the platform
         system = platform.platform()
