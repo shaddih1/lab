@@ -20,7 +20,7 @@ def usage():
         ,help="set an option to start")
     parser.add_argument("--list-options", action="store_true", default=False
         ,help="List Lab's options")
-		
+
     return parser.parse_args()
 
 def header(quiet):
@@ -39,7 +39,6 @@ def header(quiet):
 
 def main():
     args = usage()
-	header(args.quiet)
     if args.option:
         # Fire!
         lab = orchestra.LabConductor()
