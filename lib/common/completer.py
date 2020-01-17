@@ -8,6 +8,7 @@ class HeaderCompleter:
     def system():
         # get the platform
         system = platform.platform()
+
         return system
 
     def tor():
@@ -17,6 +18,7 @@ class HeaderCompleter:
             status = os.system('service tor status | head -3 | tail -1 | cut -c 13-29')
         else:
             status = "Not supported"
+
         return status
 
     def root():
@@ -29,6 +31,7 @@ class HeaderCompleter:
         # windows
         except:
             root = "Not supported"
+
         return root
 
     def local_ip():
@@ -39,6 +42,7 @@ class HeaderCompleter:
         # It does not work
         except:
             local_ip = "●red"
+
         return local_ip
 
     def myip():
@@ -48,4 +52,5 @@ class HeaderCompleter:
             # It does not work
         except:
             myip = "[!] Error"
+
         return myip
