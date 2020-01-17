@@ -4,6 +4,10 @@
 # standar python library+
 import sys, argparse, os
 
+if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
+	print("\nKickSploit supports only python3.6 or higher\n")
+	sys.exit(0)
+
 # local lab classes
 from lib.common import orchestra
 from lib.common.completer import HeaderCompleter
@@ -45,7 +49,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        sys.exit(0)
-    except SyntaxError:
-        print("\nLab supports only python3.6+.\n")
         sys.exit(0)
