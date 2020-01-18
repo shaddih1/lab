@@ -44,10 +44,8 @@ def main():
 		# Fire!
 		lab.start(args.option)
 	if args.list_options:
-		lab.
-
-
-
+		# --list-options
+		lab.list_options()
 
 
 if __name__ == "__main__":
