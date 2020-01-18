@@ -18,8 +18,10 @@ class Conductor:
         }
 
     def list_options(self):
-        for i, options in enumerate(self.options, 1):
-            print("\t" + str(i), options)
+        print("\nList Options:")
+        pritn("=" * 9)
+        for options in enumerate(self.options):
+            print(options)
         print()
 
     def start(self, args):
