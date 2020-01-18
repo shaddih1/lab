@@ -18,12 +18,11 @@ class Conductor:
         }
 
     def list_options(self):
-        print("┌─────────────────┬──────────────────────────────┐")
-        print("│ Command         | Description                  │")
-        print("├─────────────────┼──────────────────────────────┤")
+        print("┌── Options ")
+        print("│")
         for i, options in enumerate(self.options):
             if i != 2:
-                print("| " + options)
+                print("├─ " + options)
         print()
 
     def start(self, args):
