@@ -18,9 +18,9 @@ class Conductor:
         }
 
     def list_options(self):
-        for i, options in enumerate(self.options):
-            if i != 2:
-                print(i, options + "\n")
+        for i, options in enumerate(self.options, 1):
+            print(i, options)
+
 
     def start(self, args):
         while True:
