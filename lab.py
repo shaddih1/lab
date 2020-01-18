@@ -24,8 +24,7 @@ def usage():
 
 def header(quiet):
 	if not quiet:
-		print("""
-  ██▓    ▄▄▄       ▄▄▄▄
+		print("""\n  ██▓    ▄▄▄       ▄▄▄▄
  ▓██▒   ▒████▄    ▓█████▄
  ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v0.0.1 | Ethical Hacking Toolkit
  ▒██░   ░██▄▄▄▄██ ▒██░█▀          by Shady H | @ShaddiH1
@@ -34,7 +33,7 @@ def header(quiet):
  ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
    ░ ░    ░   ▒    ░    ░
      ░  ░     ░  ░ ░
-                        ░""")
+                        ░\n""")
 
 def main():
 	args = usage()

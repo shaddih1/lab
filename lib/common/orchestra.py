@@ -18,12 +18,9 @@ class Conductor:
         }
 
     def list_options(self):
-        counter = 1
-        for key, option in sorted(self.tools.items()):
-            print("\t" + counter + "}\t" + option)
-            counter += 1
-        print()
-        return
+        for i, options in enumerate(options):
+            if i != 2:
+                print(options)
 
     def start(self, args):
         while True:
@@ -33,7 +30,7 @@ class Conductor:
                 action()
                 break
             else:
-                print("Error")
+                print("\n[!] Error\n")
                 break
 
     def enable_tor(self):
