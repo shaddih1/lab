@@ -25,7 +25,7 @@ class Conductor:
         print(f"\n┌──[{homedir}]─[ListOptions]")
         print("└──╼ $")
         for i, options in enumerate(self.options, 1):
-            print("\t" + i + " - " + options)
+            print("\t" + str(i) + " - " + options)
         print()
 
     def start(self, args):
