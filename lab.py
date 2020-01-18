@@ -2,7 +2,9 @@
 # -*- coding: utf8 -*-
 
 # standar python library+
-import sys, argparse, os
+import sys
+import argparse
+import os
 
 if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 	print("\nLab supports only python3.6 or higher\n")

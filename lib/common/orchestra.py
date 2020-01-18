@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import os, platform, time
+import os
+import plaform
+import time
+from lib.common import message
 
 class Conductor:
 
@@ -18,11 +21,11 @@ class Conductor:
         }
 
     def list_options(self):
-        print("\n┌── Options ")
-        print("│")
-        for i, options in enumerate(self.options):
-            if i != 2:
-                print("├─ " + options)
+        homedir = message.get_home_directory()
+        print(f"\n┌──[{homedir}]─[ListOptions]")
+        print("└──╼ $")
+        for i, options in enumerate(self.options, 1):
+            print("\t" + i + " - " + options)
         print()
 
     def start(self, args):
