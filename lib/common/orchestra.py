@@ -19,7 +19,7 @@ class Conductor:
 
     def list_options(self):
         print("\nList Options:")
-        pritn("=" * 9)
+        print("=" * 9)
         for options in enumerate(self.options):
             print(options)
         print()
