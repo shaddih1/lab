@@ -5,5 +5,5 @@ import os.path
 
 
 def get_home_directory():
-    homedir = os.path.expandauser("~")
+    homedir = os.path.expanduser("~")
     return homedir
