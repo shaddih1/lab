@@ -3,7 +3,7 @@
 # standar python library
 import os, platform, time
 
-class LabConductor:
+class Conductor:
 
     def __init__(self):
         self.tools = {
@@ -16,6 +16,14 @@ class LabConductor:
             "updates" : self.updates,
             "more" : self.more
         }
+
+    def list_options(self):
+        counter = 1
+        for key, option in sorted(self.tools.items()):
+            print("\t" + str(counter) + "}\t" + option.cli_name)
+            counter += 1
+        print()
+        return
 
     def start(self, args):
         while True:

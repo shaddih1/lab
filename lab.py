@@ -10,7 +10,6 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 
 # local lab classes
 from lib.common import orchestra
-from lib.common import completer
 
 def usage():
     """where we parse all our arguments"""
@@ -29,7 +28,7 @@ def header(quiet):
   ██▓    ▄▄▄       ▄▄▄▄
  ▓██▒   ▒████▄    ▓█████▄
  ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v0.0.1 | Ethical Hacking Toolkit
- ▒██░   ░██▄▄▄▄██ ▒██░█▀		  by Shady H | @ShaddiH1
+ ▒██░   ░██▄▄▄▄██ ▒██░█▀          by Shady H | @ShaddiH1
  ░██████▒▓█   ▓██▒░▓█  ▀█▓
  ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
  ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
@@ -40,10 +39,15 @@ def header(quiet):
 def main():
 	args = usage()
 	header(args.quiet)
+	lab = orchestra.Conductor()
 	if args.option:
-		 # Fire!
-		 lab = orchestra.LabConductor()
-		 lab.start(args.option)
+		# Fire!
+		lab.start(args.option)
+	if args.list_options:
+		lab.
+
+
+
 
 
 if __name__ == "__main__":
