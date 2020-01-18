@@ -23,9 +23,10 @@ class Conductor:
     def list_options(self):
         homedir = message.get_home_directory()
         print(f"\n┌──[{homedir}]─[ListOptions]")
-        print("└──╼ $")
-        for i, options in enumerate(self.options, 1):
-            print("\t" + str(i) + " - " + options)
+        print("└──╼ $\n")
+        for i, options in enumerate(self.options):
+            if i != 2:
+                print("\t- " + options)
         print()
 
     def start(self, args):
