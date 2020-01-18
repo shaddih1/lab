@@ -20,7 +20,7 @@ class Conductor:
     def list_options(self):
         for i, options in enumerate(self.options):
             if i != 2:
-                print(options)
+                print(i, options + "\n")
 
     def start(self, args):
         while True:
