@@ -6,7 +6,7 @@ import os, platform, time
 class Conductor:
 
     def __init__(self):
-        self.tools = {
+        self.options = {
             "enable_tor" : self.enable_tor,
             "disable_tor" : self.disable_tor,
             "tools" : self.tools,
@@ -18,13 +18,13 @@ class Conductor:
         }
 
     def list_options(self):
-        for i, options in enumerate(options):
+        for i, options in enumerate(self.options):
             if i != 2:
                 print(options)
 
     def start(self, args):
         while True:
-            action = self.tools.get(args.lower())
+            action = self.options.get(args.lower())
 
             if action:
                 action()
