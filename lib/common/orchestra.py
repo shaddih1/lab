@@ -20,7 +20,7 @@ class Conductor:
     def list_options(self):
         counter = 1
         for key, option in sorted(self.tools.items()):
-            print("\t" + str(counter) + "}\t" + option)
+            print("\t" + counter + "}\t" + option)
             counter += 1
         print()
         return
