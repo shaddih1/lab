@@ -33,7 +33,7 @@ def header(quiet):
  ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
    ░ ░    ░   ▒    ░    ░
      ░  ░     ░  ░ ░
-                        ░\n""")
+                        ░""")
 
 def main():
 	args = usage()
