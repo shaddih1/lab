@@ -18,7 +18,7 @@ class Conductor:
         }
 
     def list_options(self):
-        print("┌── Options ")
+        print("\n┌── Options ")
         print("│")
         for i, options in enumerate(self.options):
             if i != 2:
