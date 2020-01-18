@@ -2,7 +2,7 @@
 
 # standar python library
 import os
-import plaform
+import platform
 import time
 from lib.common import message
 
