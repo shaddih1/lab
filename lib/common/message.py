@@ -7,5 +7,5 @@ def get_home_directory():
     try:
         homedir = os.path.expanduser("~")
     except:
-        homedir = "!"
+        homedir = "-"
     return homedir
