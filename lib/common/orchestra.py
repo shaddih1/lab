@@ -15,7 +15,7 @@ class Conductor:
     def __init__(self):
         self.homedir = message.get_home_directory()
         self.system = platform.system()
-        self.date = date = time.ctime(time.time())
+        self.date = time.ctime(time.time())
         self.options = {
             "enable_tor" : self.enable_tor,
             "disable_tor" : self.disable_tor,
