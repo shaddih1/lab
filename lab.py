@@ -15,17 +15,15 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 from lib.common import orchestra
 
 def usage():
-    """
+	"""
 	where we parse all our arguments
 	"""
-    parser = argparse.ArgumentParser(description="Lab | Simplify your life | Ethical Hacking tool")
-    parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
-	opparser.add_argument("--list-options", action="store_true", default=False
-		,help="List Lab's options")
-    parser.add_argument("--option", metavar="OPTION", default=None
-        ,help="set an option to start")
+	parser = argparse.ArgumentParser(description="Lab | Simplify your life | Ethical Hacking tool")
+	parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
+	parser.add_argument("--list-options", action="store_true", default=False ,help="List Lab's options")
+	parser.add_argument("--option", metavar="OPTION",help="set an option to start")
 
-    return parser.parse_args()
+	return parser.parse_args()
 
 def header(quiet):
 	if not quiet:
