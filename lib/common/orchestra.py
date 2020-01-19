@@ -9,9 +9,7 @@ import time
 from lib.common import message
 
 class Conductor:
-    """
-    class used to filter arguments
-    """
+    """class used to filter arguments"""
     def __init__(self):
         self.homedir = message.get_home_directory()
         self.system = platform.system()
@@ -26,16 +24,14 @@ class Conductor:
             "updates" : self.updates,
             "menu" : self.menu
         }
-        self.tools = ["fdfsd", "fdsf", "fdsfsd", "gfghd", "jhjhgj"]
+        self.tools = []
 
     def list_options(self):
-        """
-        Show all argument options added in Lab
-        """
+        """Show all argument options added in Lab"""
         print(f"\n┌──[{self.homedir}]─[/lab/list_options]")
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
-            print(f"\t[i] {options} - {self.options.get(options).__doc__)}")
+            print(f"\t{options} - {self.options.get(options).__doc__}")
         print()
 
     def start(self, args):
@@ -50,9 +46,7 @@ class Conductor:
                 break
 
     def enable_tor(self):
-        """
-        Tor (anonymity network) start and then exit
-        """
+        """Tor (anonymity network) start and then exit"""
         if self.system == "Linux":
             try:
                 os.system('service tor start')
@@ -64,9 +58,7 @@ class Conductor:
             print(f"\n[!] This option does not work on {self.system}\n")
 
     def disable_tor(self):
-        """
-        Tor (anonymity network) stop and then exit
-        """
+        """Tor (anonymity network) stop and then exit"""
         if self.system == "Linux":
             try:
                 os.system('service tor stop')
@@ -78,21 +70,19 @@ class Conductor:
             print(f"\n[!] This option does not work on {self.system}\n")
 
     def tools(self):
-        """
-        Show all tools added in Lab
-        """
+        """Show all tools added in Lab"""
         print(f"\n┌──[{self.homedir}]─[/lab/tools]")
         print("└──╼ $\n")
         for i, tools in enumerate(self.tools, 1):
             print(f"\t{i} - {tools}")
-        input("\nDo you want to continue? Y/n : ")
+        input("\n[+] Do you want to continue? Y/n : ")
 
     def view_mac(self):
-        """4"""
+        """Show your MAC address and then exit"""
         print(4)
 
     def change_mac(self):
-        """5"""
+        """Change your MAC address and then exit"""
         print(5)
 
     def metasploit(self):

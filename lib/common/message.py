@@ -4,5 +4,8 @@
 import os.path
 
 def get_home_directory():
-    homedir = os.path.expanduser("~")
+    try:
+        homedir = os.path.expanduser("~")
+    except:
+        homedir = "!"
     return homedir
