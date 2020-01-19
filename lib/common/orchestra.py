@@ -17,7 +17,7 @@ class Conductor:
             "change_mac" : self.change_mac,
             "metasploit" : self.metasploit,
             "updates" : self.updates,
-            "more" : self.more
+            "menu" : self.menu
         }
 
     def list_options(self):
@@ -88,6 +88,6 @@ class Conductor:
         """7"""
         print(7)
 
-    def more(self):
+    def menu(self):
         """8"""
         print(8)
