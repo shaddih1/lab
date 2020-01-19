@@ -29,7 +29,7 @@ class Conductor:
 
     def list_options(self):
         """
-        show all argument options added in Lab
+        Show all argument options added in Lab
         """
         print(f"\n┌──[{self.homedir}]─[ListOptions]")
         print("└──╼ $\n")
@@ -50,7 +50,7 @@ class Conductor:
 
     def enable_tor(self):
         """
-        tor (anonymity network) start and then exit
+        Tor (anonymity network) start and then exit
         """
         if self.system == "Linux":
             try:
@@ -64,7 +64,7 @@ class Conductor:
 
     def disable_tor(self):
         """
-        tor (anonymity network) stop and then exit
+        Tor (anonymity network) stop and then exit
         """
         if self.system == "Linux":
             try:
@@ -78,7 +78,7 @@ class Conductor:
 
     def tools(self):
         """
-        show all tools added in Lab
+        Show all tools added in Lab
         """
         print(3)
 
