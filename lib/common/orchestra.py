@@ -9,6 +9,9 @@ from lib.common import message
 class Conductor:
 
     def __init__(self):
+        self.homedir = message.get_home_directory()
+        self.system = platform.system()
+        self.date = date = time.ctime(time.time())
         self.options = {
             "enable_tor" : self.enable_tor,
             "disable_tor" : self.disable_tor,
@@ -20,13 +23,12 @@ class Conductor:
             "menu" : self.menu
         }
 
+    # --list-options
     def list_options(self):
-        homedir = message.get_home_directory()
-        print(f"\n┌──[{homedir}]─[ListOptions]")
+        print(f"\n┌──[{self.homedir}]─[ListOptions]")
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
-            if i != 2:
-                print("\t[i]", options, "-", self.options.get(options).__doc__)
+            print("\t[i]", options, "-", self.options.get(options).__doc__)
         print()
 
     def start(self, args):
@@ -42,34 +44,30 @@ class Conductor:
 
     def enable_tor(self):
         """tor (anonymity network) start and then exit"""
-        system = platform.system()
-        date = time.ctime(time.time())
-        if system == "Linux":
+        if self.system == "Linux":
             try:
                 os.system('service tor start')
-                print(f"\n[+] Tor has been activaded at {date}\n")
+                print(f"\n[+] Tor has been activaded at {self.date}\n")
             except:
                 os.system('systemctl tor start')
-                print(f"\n[+] Tor has been activaded at {date}\n")
+                print(f"\n[+] Tor has been activaded at {self.date}\n")
         else:
-            print(f"\n[!] This option does not work on {system}\n")
+            print(f"\n[!] This option does not work on {self.system}\n")
 
     def disable_tor(self):
         """tor (anonymity network) stop and then exit"""
-        system = platform.system()
-        date = time.ctime(time.time())
-        if system == "Linux":
+        if self.system == "Linux":
             try:
                 os.system('service tor stop')
-                print(f"\n[+] Tor has been disabled at {date}\n")
+                print(f"\n[+] Tor has been disabled at {self.date}\n")
             except:
                 os.system('systemctl tor stop')
-                print(f"\n[+] Tor has been disabled at {date}\n")
+                print(f"\n[+] Tor has been disabled at {self.date}\n")
         else:
-            print(f"\n[!] This option does not work on {system}\n")
+            print(f"\n[!] This option does not work on {self.system}\n")
 
     def tools(self):
-        """3"""
+        """show all tools added in Lab"""
         print(3)
 
     def view_mac(self):
