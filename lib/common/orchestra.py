@@ -22,7 +22,7 @@ class Conductor:
             "change_mac" : self.change_mac,
             "metasploit" : self.metasploit,
             "updates" : self.updates,
-            "menu" : self.menu
+            "more" : self.more
         }
         self.tools = []
 
@@ -93,6 +93,6 @@ class Conductor:
         """7"""
         print(7)
 
-    def menu(self):
+    def more(self):
         """8"""
         print(8)
