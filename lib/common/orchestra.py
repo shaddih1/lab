@@ -26,7 +26,7 @@ class Conductor:
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
             if i != 2:
-                print("\t- " + options + self.options.__doc__)
+                print("\t[i]", options, "-", self.options.get(options).__doc__)
         print()
 
     def start(self, args):
@@ -41,22 +41,30 @@ class Conductor:
                 break
 
     def enable_tor(self):
-        """1"""
+        """tor (anonymity network) start and then exit"""
         system = platform.system()
         date = time.ctime(time.time())
         if system == "Linux":
-            os.system('service tor start')
-            print(f"\n[+] Tor has been activaded at {date}\n")
+            try:
+                os.system('service tor start')
+                print(f"\n[+] Tor has been activaded at {date}\n")
+            except:
+                os.system('systemctl tor start')
+                print(f"\n[+] Tor has been activaded at {date}\n")
         else:
             print(f"\n[!] This option does not work on {system}\n")
 
     def disable_tor(self):
-        """2"""
+        """tor (anonymity network) stop and then exit"""
         system = platform.system()
         date = time.ctime(time.time())
         if system == "Linux":
-            os.system('sudo service tor stop')
-            print(f"\n[+] Tor has been disabled at {date}\n")
+            try:
+                os.system('service tor stop')
+                print(f"\n[+] Tor has been disabled at {date}\n")
+            except:
+                os.system('systemctl tor stop')
+                print(f"\n[+] Tor has been disabled at {date}\n")
         else:
             print(f"\n[!] This option does not work on {system}\n")
 
