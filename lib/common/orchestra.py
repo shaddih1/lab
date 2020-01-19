@@ -26,15 +26,16 @@ class Conductor:
             "updates" : self.updates,
             "menu" : self.menu
         }
+        self.tools = ["fdfsd", "fdsf", "fdsfsd", "gfghd", "jhjhgj"]
 
     def list_options(self):
         """
         Show all argument options added in Lab
         """
-        print(f"\n┌──[{self.homedir}]─[ListOptions]")
+        print(f"\n┌──[{self.homedir}]─[/lab/list_options]")
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
-            print("\t[i]", options, "-", self.options.get(options).__doc__)
+            print(f"\t[i] {options} - {self.options.get(options).__doc__)}")
         print()
 
     def start(self, args):
@@ -80,7 +81,11 @@ class Conductor:
         """
         Show all tools added in Lab
         """
-        print(3)
+        print(f"\n┌──[{self.homedir}]─[/lab/tools]")
+        print("└──╼ $\n")
+        for i, tools in enumerate(self.tools, 1):
+            print(f"\t{i} - {tools}")
+        input("\nDo you want to continue? Y/n : ")
 
     def view_mac(self):
         """4"""
