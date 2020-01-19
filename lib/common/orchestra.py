@@ -4,10 +4,14 @@
 import os
 import platform
 import time
+
+# local lab classes
 from lib.common import message
 
 class Conductor:
-
+    """
+    class used to filter arguments
+    """
     def __init__(self):
         self.homedir = message.get_home_directory()
         self.system = platform.system()
@@ -23,8 +27,10 @@ class Conductor:
             "menu" : self.menu
         }
 
-    # --list-options
     def list_options(self):
+        """
+        show all argument options added in Lab
+        """
         print(f"\n┌──[{self.homedir}]─[ListOptions]")
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
@@ -43,7 +49,9 @@ class Conductor:
                 break
 
     def enable_tor(self):
-        """tor (anonymity network) start and then exit"""
+        """
+        tor (anonymity network) start and then exit
+        """
         if self.system == "Linux":
             try:
                 os.system('service tor start')
@@ -55,7 +63,9 @@ class Conductor:
             print(f"\n[!] This option does not work on {self.system}\n")
 
     def disable_tor(self):
-        """tor (anonymity network) stop and then exit"""
+        """
+        tor (anonymity network) stop and then exit
+        """
         if self.system == "Linux":
             try:
                 os.system('service tor stop')
@@ -67,7 +77,9 @@ class Conductor:
             print(f"\n[!] This option does not work on {self.system}\n")
 
     def tools(self):
-        """show all tools added in Lab"""
+        """
+        show all tools added in Lab
+        """
         print(3)
 
     def view_mac(self):
