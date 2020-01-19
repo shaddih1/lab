@@ -3,7 +3,9 @@
 # standar python library
 import os
 import platform
+import re
 import time
+import uuid
 
 # local lab classes
 from lib.common import message
@@ -79,7 +81,9 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        print(4)
+        # Reference: https://generacodice.com/en/articolo/45149/Getting-MAC-Addressa=r
+        print ("\nThe MAC address in formatted and less complex way is : ", end="")
+        print (':'.join(re.findall('..', '%012x' % uuid.getnode())))
 
     def change_mac(self):
         """Change your MAC address and then exit"""
