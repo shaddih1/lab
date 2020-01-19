@@ -33,7 +33,7 @@ class Conductor:
         print(f"\n┌──[{self.homedir}]─[/lab/list_options]")
         print("└──╼ $\n")
         for i, options in enumerate(self.options):
-            print(f"\t{options} - {self.options.get(options).__doc__}")
+            print(f"\t{options} ─ {self.options.get(options).__doc__}")
         print()
 
     def start(self, args):
@@ -81,9 +81,9 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        # Reference: https://generacodice.com/en/articolo/45149/Getting-MAC-Addressa=r
-        print ("\nThe MAC address in formatted and less complex way is : ", end="")
-        print (':'.join(re.findall('..', '%012x' % uuid.getnode())))
+        get_mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
+        # Reference: https://www.geeksforgeeks.org/extracting-mac-address-using-python/
+        print (f"\n[+] The MAC address in formatted and less complex way is : {get_mac_address}\n")
 
     def change_mac(self):
         """Change your MAC address and then exit"""
