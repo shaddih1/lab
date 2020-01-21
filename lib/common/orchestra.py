@@ -41,7 +41,8 @@ class Conductor:
             
             if action:
                 action()
-
+                break
+                
             else:
                 print("\n[!] Error: The selected option does not exist\n")
                 break
