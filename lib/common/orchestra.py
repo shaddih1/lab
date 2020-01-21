@@ -31,6 +31,7 @@ class Conductor:
     def list_options(self):
         """Show all argument options added in Lab"""
         self.complete_message
+        # Loop over all options loaded into Lab
         for i, options in enumerate(self.options):
             print(f"\t{options} ─ {self.options.get(options).__doc__}")
         print()
@@ -38,11 +39,12 @@ class Conductor:
     def start(self, args):
         while True:
             action = self.options.get(args.lower())
+            
             if action:
                 action()
-                break
+
             else:
-                print("\n[!] Error\n")
+                print("\n[!] Error: The selected option does not exist\n")
                 break
 
     def enable_tor(self):
@@ -71,28 +73,28 @@ class Conductor:
 
     def tools(self):
         """Show all tools added in Lab"""
-        print(f"\n┌──[{self.homedir}]─[/lab/tools]")
-        print("└──╼ $\n")
+        self.complete_message
+        # Loop over all tools loaded into Lab
         for i, tools in enumerate(self.tools, 1):
             print(f"\t{i} - {tools}")
         input("\n[+] Do you want to continue? Y/n : ")
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        print("""Coming Soon""")
+        print("Coming Soon")
 
     def change_mac(self):
         """Change your MAC address and then exit"""
-        print(5)
+        print("Coming Soon")
 
     def metasploit(self):
-        """6"""
-        print(6)
+        """Start Metasploit framework"""
+        print("Coming Soon")
 
-    def updates(self):
-        """7"""
-        print(7)
+    def updates("Coming Soon"):
+        """Check if there is a new update"""
+        print("Coming Soon")
 
     def more(self):
-        """8"""
-        print(8)
+        """Show a menu with more options"""
+        print("Coming Soon")
