@@ -5,7 +5,6 @@ import os
 import platform
 import re
 import time
-import uuid
 
 # local lab classes
 from lib.common import message
