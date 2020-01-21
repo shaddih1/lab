@@ -13,7 +13,7 @@ from lib.common import message
 class Conductor:
     """class used to filter arguments"""
     def __init__(self):
-        self.homedir = message.get_home_directory()
+        self.complete_message = message.complete_message()
         self.system = platform.system()
         self.date = time.ctime(time.time())
         self.options = {
@@ -30,8 +30,7 @@ class Conductor:
 
     def list_options(self):
         """Show all argument options added in Lab"""
-        print(f"\n┌──[{self.homedir}]─[/lab/list_options]")
-        print("└──╼ $\n")
+        self.complete_message
         for i, options in enumerate(self.options):
             print(f"\t{options} ─ {self.options.get(options).__doc__}")
         print()
@@ -39,7 +38,6 @@ class Conductor:
     def start(self, args):
         while True:
             action = self.options.get(args.lower())
-
             if action:
                 action()
                 break
@@ -81,9 +79,7 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        get_mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
-        # Reference: https://www.geeksforgeeks.org/extracting-mac-address-using-python/
-        print (f"\n[+] The MAC address in formatted and less complex way is : {get_mac_address}\n")
+        print("""Coming Soon""")
 
     def change_mac(self):
         """Change your MAC address and then exit"""

@@ -13,6 +13,7 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 
 # local lab classes
 from lib.common import orchestra
+from lib.common import message
 
 def usage():
 	"""where we parse all our arguments"""
@@ -23,22 +24,9 @@ def usage():
 
 	return parser.parse_args()
 
-def header(quiet):
-	if not quiet:
-		print("""\n  ██▓    ▄▄▄       ▄▄▄▄
- ▓██▒   ▒████▄    ▓█████▄
- ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v0.0.1 | Ethical Hacking Toolkit
- ▒██░   ░██▄▄▄▄██ ▒██░█▀          by Shady H | @ShaddiH1
- ░██████▒▓█   ▓██▒░▓█  ▀█▓
- ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
-   ░ ░    ░   ▒    ░    ░
-     ░  ░     ░  ░ ░
-                        ░""")
-
 def main():
 	args = usage()
-	header(args.quiet)
+	message.header(args.quiet)
 	lab = orchestra.Conductor()
 	if args.list_options:
 		# --list-options
