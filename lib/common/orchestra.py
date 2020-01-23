@@ -86,7 +86,7 @@ class Conductor:
         """Start Metasploit framework"""
         print("Coming Soon")
 
-    def updates("Coming Soon"):
+    def updates(self):
         """Check if there is a new update"""
         print("Coming Soon")
 
