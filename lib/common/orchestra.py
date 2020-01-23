@@ -36,16 +36,12 @@ class Conductor:
         print()
 
     def start(self, args):
-        while True:
             action = self.options.get(args.lower())
 
             if action:
                 action()
-                break
-
             else:
                 print("\n[!] Error: The selected option does not exist\n")
-                break
 
     def enable_tor(self):
         """Tor (anonymity network) start and then exit"""
