@@ -31,7 +31,7 @@ def main():
 	if args.list_options:
 		# --list-options
 		lab.list_options()
-	if args.option:
+	elif args.option:
 		# Fire!
 		lab.start(args.option)
 
