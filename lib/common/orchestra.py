@@ -52,9 +52,9 @@ class Conductor:
         try:
             if not self.system != "Linux":
                 subprocess.run(["service","tor","start"])
-                print(f"\n[+] Tor has been enable at {self.date}\n")
+                print(f"[+] Tor has been enable at {self.date}\n")
         except:
-            print(f"\n[!] This option does not work on {self.system}\n")
+            print(f"[!] This option does not work on {self.system}\n")
 
 
     def disable_tor(self):
@@ -62,13 +62,12 @@ class Conductor:
         try:
             if not self.system != "Linux":
                 subprocess.run(["service","tor","stop"])
-                print(f"\n[+] Tor has been disable at {self.date}\n")
+                print(f"[+] Tor has been disable at {self.date}\n")
         except:
-            print(f"\n[!] This option does not work on {self.system}\n")
+            print(f"[!] This option does not work on {self.system}\n")
 
     def tools(self):
         """Show all tools added in Lab"""
-        self.complete_message
         # Loop over all tools loaded into Lab
         for i, tools in enumerate(self.tools, 1):
             print(f"\t{i} - {tools}")
