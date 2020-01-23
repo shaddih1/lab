@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import os
+import subprocess
 import platform
 import re
 import time
@@ -38,37 +38,32 @@ class Conductor:
     def start(self, args):
         while True:
             action = self.options.get(args.lower())
-            
+
             if action:
                 action()
                 break
-                
+
             else:
                 print("\n[!] Error: The selected option does not exist\n")
                 break
 
     def enable_tor(self):
         """Tor (anonymity network) start and then exit"""
-        if self.system == "Linux":
-            try:
-                os.system('service tor start')
-                print(f"\n[+] Tor has been activaded at {self.date}\n")
-            except:
-                os.system('systemctl tor start')
-                print(f"\n[+] Tor has been activaded at {self.date}\n")
-        else:
+        try:
+            if not self.system != "Linux":
+                subprocess.run(["service","tor","start"])
+                print(f"\n[+] Tor has been enable at {self.date}\n")
+        except:
             print(f"\n[!] This option does not work on {self.system}\n")
+
 
     def disable_tor(self):
         """Tor (anonymity network) stop and then exit"""
-        if self.system == "Linux":
-            try:
-                os.system('service tor stop')
-                print(f"\n[+] Tor has been disabled at {self.date}\n")
-            except:
-                os.system('systemctl tor stop')
-                print(f"\n[+] Tor has been disabled at {self.date}\n")
-        else:
+        try:
+            if not self.system != "Linux":
+                subprocess.run(["service","tor","stop"])
+                print(f"\n[+] Tor has been disable at {self.date}\n")
+        except:
             print(f"\n[!] This option does not work on {self.system}\n")
 
     def tools(self):
