@@ -18,8 +18,8 @@ lab_version = "0.0.2"
 
 def header(quiet):
     """Print the header, with version"""
-	if not quiet:
-		print(f"""\n  ██▓    ▄▄▄       ▄▄▄▄
+    if not quiet:
+        print(f"""\n  ██▓    ▄▄▄       ▄▄▄▄
  ▓██▒   ▒████▄    ▓█████▄
  ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v{lab_version} | Ethical Hacking Toolkit
  ▒██░   ░██▄▄▄▄██ ▒██░█▀          by Shady H | @ShaddiH1
