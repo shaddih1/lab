@@ -52,7 +52,6 @@ class Conductor:
         else:
             print(f"[!] This option does not work on {self.system}\n")
 
-
     def disable_tor(self):
         """Tor (anonymity network) stop and then exit"""
         if not self.system != "Linux":
