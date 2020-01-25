@@ -3,8 +3,9 @@
 # standar python library
 import subprocess
 import platform
-import re
 import time
+import socket
+from getmac import get_mac_address
 
 # local lab classes
 from lib.common import message
@@ -26,6 +27,8 @@ class Conductor:
             "more" : self.more
         }
         self.tools = []
+        self.local_ip = socket.gethostbyname(socket.gethostname())
+        self.mac = get_mac_address()
 
     def list_options(self):
         """Show all argument options added in Lab"""
@@ -71,7 +74,7 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        print("Coming Soon")
+        print(f"Host\t{self.local_ip}\tMAC:{self.mac}\t")
 
     def change_mac(self):
         """Change your MAC address and then exit"""
