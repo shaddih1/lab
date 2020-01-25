@@ -23,7 +23,6 @@ class Conductor:
             "view_mac" : self.view_mac,
             "change_mac" : self.change_mac,
             "metasploit" : self.metasploit,
-            "updates" : self.updates,
             "more" : self.more
         }
         self.tools = []
@@ -39,30 +38,27 @@ class Conductor:
         print()
 
     def start(self, args):
-            action = self.options.get(args.lower())
-
-            if action:
-                action()
-            else:
-                print("\n[!] Error: The selected option does not exist\n")
+        action = self.options.get(args.lower())
+        if action:
+            action()
+        else:
+            print("\n[!] Error: The selected option does not exist\n")
 
     def enable_tor(self):
         """Tor (anonymity network) start and then exit"""
-        try:
-            if not self.system != "Linux":
-                subprocess.run(["service","tor","start"])
-                print(f"[+] Tor has been enable at {self.date}\n")
-        except:
+        if not self.system != "Linux":
+            subprocess.run(["service","tor","start"])
+            print(f"[+] Tor has been enable at {self.date}\n")
+        else:
             print(f"[!] This option does not work on {self.system}\n")
 
 
     def disable_tor(self):
         """Tor (anonymity network) stop and then exit"""
-        try:
-            if not self.system != "Linux":
-                subprocess.run(["service","tor","stop"])
-                print(f"[+] Tor has been disable at {self.date}\n")
-        except:
+        if not self.system != "Linux":
+            subprocess.run(["service","tor","stop"])
+            print(f"[+] Tor has been disable at {self.date}\n")
+        else:
             print(f"[!] This option does not work on {self.system}\n")
 
     def tools(self):
@@ -82,11 +78,11 @@ class Conductor:
 
     def metasploit(self):
         """Start Metasploit framework"""
-        print("Coming Soon")
-
-    def updates(self):
-        """Check if there is a new update"""
-        print("Coming Soon")
+        if not self.system != "Linux":
+            print("[!] This option will be improved in the future.\n")
+            subprocess.run(["msfconsole","-q"])
+        else:
+            print(f"[!] This option does not work on {self.system}\n")
 
     def more(self):
         """Show a menu with more options"""
