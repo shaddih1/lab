@@ -4,6 +4,9 @@
 import git
 import subprocess
 
+# local lab classes
+from lib.common import orchestra
+
 def update():
     try:
         git = git.cmd.Git(git_dir)
