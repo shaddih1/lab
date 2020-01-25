@@ -73,7 +73,7 @@ class Conductor:
 
     def change_mac(self):
         """Change your MAC address and then exit"""
-        print("Coming Soon")
+        print("Coming Soon\n")
 
     def metasploit(self):
         """Start Metasploit framework"""
@@ -85,4 +85,4 @@ class Conductor:
 
     def more(self):
         """Show a menu with more options"""
-        print("Coming Soon")
+        print("Coming Soon\n")
