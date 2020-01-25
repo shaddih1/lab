@@ -47,7 +47,7 @@ class Conductor:
     def enable_tor(self):
         """Tor (anonymity network) start and then exit"""
         if not self.system != "Linux":
-            subprocess.run(["service","tor","start"])
+            enable = subprocess.run(["service","tor","start"])
             print(f"[+] Tor has been enable at {self.date}\n")
         else:
             print(f"[!] This option does not work on {self.system}\n")
@@ -55,7 +55,7 @@ class Conductor:
     def disable_tor(self):
         """Tor (anonymity network) stop and then exit"""
         if not self.system != "Linux":
-            subprocess.run(["service","tor","stop"])
+            disable = subprocess.run(["service","tor","stop"])
             print(f"[+] Tor has been disable at {self.date}\n")
         else:
             print(f"[!] This option does not work on {self.system}\n")
@@ -79,7 +79,7 @@ class Conductor:
         """Start Metasploit framework"""
         if not self.system != "Linux":
             print("[!] This option will be improved in the future.\n")
-            subprocess.run(["msfconsole","-q"])
+            msfconsole = subprocess.run(["msfconsole","-q"])
         else:
             print(f"[!] This option does not work on {self.system}\n")
 
