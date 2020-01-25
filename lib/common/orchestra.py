@@ -65,7 +65,10 @@ class Conductor:
         # Loop over all tools loaded into Lab
         for i, tools in enumerate(self.tools, 1):
             print(f"\t{i} - {tools}")
-        input("\n[+] Do you want to continue? Y/n : ")
+        if not self.tools != []:
+            pass
+        else:
+            input("\n[+] Do you want to continue? Y/n : ")
 
     def view_mac(self):
         """Show your MAC address and then exit"""
