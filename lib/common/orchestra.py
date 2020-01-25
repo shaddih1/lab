@@ -74,7 +74,7 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        print(f"Host\t{self.local_ip}\tMAC:{self.mac}\t")
+        print(f"[+] Host\t{self.local_ip}\tMAC\t{self.mac}\n")
 
     def change_mac(self):
         """Change your MAC address and then exit"""
