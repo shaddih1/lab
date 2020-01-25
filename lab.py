@@ -29,15 +29,12 @@ def main():
 	args = usage()
 	message.header(args.quiet)
 	lab = orchestra.Conductor()
-	if len(sys.argv) < 2:
-		pass # interactive_menu()
-	else:
-		if args.list_options:
-			# --list-options
-			lab.list_options()
-		if args.option:
-			# Fire!
-			lab.start(args.option)
+	if args.list_options:
+		# --list-options
+		lab.list_options()
+	if args.option:
+		# Fire!
+		lab.start(args.option)
 
 if __name__ == "__main__":
     try:
