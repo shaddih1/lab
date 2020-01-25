@@ -19,7 +19,7 @@ def usage():
 	"""where we parse all our arguments"""
 	parser = argparse.ArgumentParser(description="Lab | Simplify your life | Ethical Hacking tool")
 	parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
-	parser.add_argument("--list-options", help="List Lab's options", action="store_true")
+	parser.add_argument("--list-options", help="list Lab's options", action="store_true")
 	parser.add_argument("--option", help="set an option to start", metavar="OPTION")
 	parser.add_argument("-u", "--update", help="check if there is a new update", action="store_true")
 
