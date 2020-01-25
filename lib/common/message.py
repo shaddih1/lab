@@ -14,7 +14,7 @@ def complete_message():
     print("└──╼ $\n")
 
 # current version of lab
-lab_version = "0.0.2"
+lab_version = "0.0.3"
 
 def header(quiet):
     """Print the header, with version"""
