@@ -65,7 +65,6 @@ class Conductor:
         # Loop over all tools loaded into Lab
         for i, tools in enumerate(self.tools, 1):
             print(f"\t{i} - {tools}")
-        print()
         if not self.tools != []:
             pass
         else:
