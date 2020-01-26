@@ -22,10 +22,10 @@ def header(quiet):
         print(f"""\n  ██▓    ▄▄▄       ▄▄▄▄
  ▓██▒   ▒████▄    ▓█████▄
  ▒██░   ▒██  ▀█▄  ▒██▒ ▄██   v{lab_version} | Ethical Hacking Toolkit
- ▒██░   ░██▄▄▄▄██ ▒██░█▀          by Shady H | @ShaddiH1
+ ▒██░   ░██▄▄▄▄██ ▒██░█▀         Made with <3 by Shady H
  ░██████▒▓█   ▓██▒░▓█  ▀█▓
  ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░           Simplify your life
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░          Simplify your life
    ░ ░    ░   ▒    ░    ░
      ░  ░     ░  ░ ░
                         ░""")
