@@ -38,14 +38,14 @@ class MainMenu:
 
     def start(self):
         """display the menu and respond to the options"""
-        while True:
-            self.main_menu()
-            option = input(message.menu_input())
-            action = self.options.get(option)
-            if action:
-                action()
-            else:
-                print(message.menu_err())
+        self.main_menu()
+        option = input(message.menu_input())
+        action = self.options.get(option)
+        if action:
+            action()
+        else:
+            print(message.menu_err())
+            return
 
     def tor(self):
         print(1)
