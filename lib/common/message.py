@@ -14,6 +14,16 @@ def complete_message():
     print(f"\n┌──[{get_home_directory()}]─[/lab/]")
     print("└──╼ $\n")
 
+def main_menu():
+    print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
+└──╼ $
+
+        1 - Tor          |  6 - Buy me a coffe
+        2 - Tools        |  7 - More
+        3 - MAC address  |  8 - Credits
+        4 - Metasploit   |  9 - Exit
+        5 - Update       |  """)
+
 def menu_input():
     """input message"""
     menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
