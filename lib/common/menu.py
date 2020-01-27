@@ -44,8 +44,8 @@ class MainMenu:
             action = self.options.get(option)
             if action:
                 action()
-        else:
-            print(message.menu_err())
+            else:
+                print(message.menu_err())
 
 
     def tor(self):
