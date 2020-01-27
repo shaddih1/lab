@@ -11,7 +11,7 @@ class MainMenu:
 
     def __init__(self):
         self.home_dir = message.get_home_directory()
-        self.header = message.header()
+        self.header = message.header(False)
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
