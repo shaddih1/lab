@@ -26,7 +26,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
-
+        self.header
         print(f"""\n┌──[{self.home_dir}]─[/lab/]
 └──╼ $
 
