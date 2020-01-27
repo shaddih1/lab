@@ -4,7 +4,7 @@
 import sys
 import os
 import readline
-from time import sleep
+import time 
 
 # local Lab classes
 from lib.common import message
