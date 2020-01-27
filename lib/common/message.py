@@ -24,6 +24,8 @@ def menu_err():
     """"""
     error = "\n[!] This option does not exist\n"
 
+    return error
+
 # current version of lab
 lab_version = "0.0.2"
 

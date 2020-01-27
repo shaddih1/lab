@@ -25,13 +25,13 @@ class MainMenu:
 
     def start(self):
         while True:
-            option = input(message.menu_input)
+            option = input(message.menu_input())
             action = self.options.get(option)
 
             if action:
                 action()
             else:
-                print(message.menu_err)
+                print(message.menu_err())
 
     def tor(self):
         print(1)
