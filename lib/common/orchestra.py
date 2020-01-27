@@ -38,6 +38,7 @@ class Conductor:
         print()
 
     def start(self, args):
+        """respond to options"""
         action = self.options.get(args.lower())
         if action:
             action()

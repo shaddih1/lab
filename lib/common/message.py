@@ -5,16 +5,17 @@ import os
 
 def get_home_directory():
     """get homedir"""
-    homedir = os.path.expanduser("~")
-    return homedir
+    home_dir = os.path.expanduser("~")
+
+    return home_dir
 
 def complete_message():
-    """complete lab message"""
+    """complete message"""
     print(f"\n┌──[{get_home_directory()}]─[/lab/]")
     print("└──╼ $\n")
 
 def menu_input():
-    """menu Lab input"""
+    """input message"""
     menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
 └──╼ $ """
 
