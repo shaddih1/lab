@@ -11,6 +11,7 @@ class MainMenu:
 
     def __init__(self):
         self.home_dir = message.get_home_directory()
+        self.header = message.header()
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -25,6 +26,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
+
         print(f"""\n┌──[{self.home_dir}]─[/lab/]
 └──╼ $
 
