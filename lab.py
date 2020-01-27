@@ -34,7 +34,7 @@ def usage():
 def main():
 	args = usage()
 	if len(sys.argv) == 2:
-		if args.option:
+		if args.quiet:
 			print("[!] Please add more arguments")
 	else:
 		message.header(args.quiet)
