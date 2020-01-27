@@ -46,7 +46,6 @@ class MainMenu:
                 action()
         else:
             print(message.menu_err())
-            return
 
 
     def tor(self):
