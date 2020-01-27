@@ -2,7 +2,9 @@
 
 # standar python library
 import sys
+import os
 import readline
+from time import sleep
 
 # local Lab classes
 from lib.common import message
@@ -11,7 +13,6 @@ class MainMenu:
 
     def __init__(self):
         self.home_dir = message.get_home_directory()
-        self.header = message.header(False)
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -26,7 +27,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
-        print(f"""┌──[{self.home_dir}]─[/lab/]
+        print(f"""┌──[{self.home_dir}]─[/lab/menu]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
@@ -39,6 +40,7 @@ class MainMenu:
     def start(self):
         """display the menu and respond to the options"""
         while True:
+            header = message.header(False)
             self.main_menu()
             option = input(message.menu_input())
             action = self.options.get(option)
@@ -46,7 +48,8 @@ class MainMenu:
                 action()
             else:
                 print(message.menu_err())
-
+                time.sleep(5)
+                os.system('clear')
 
     def tor(self):
         print(1)
