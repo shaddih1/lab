@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import os.path
+import os
 
 def get_home_directory():
     """get homedir"""
@@ -12,6 +12,17 @@ def complete_message():
     """complete menu message"""
     print(f"\n┌──[{get_home_directory()}]─[/lab/]")
     print("└──╼ $\n")
+
+def menu_input():
+    """"""
+    menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
+└──╼ $\n"""
+
+    return menu_input
+
+def menu_err():
+    """"""
+    error = "\n[!] This option does not exist\n"
 
 # current version of lab
 lab_version = "0.0.2"

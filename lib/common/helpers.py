@@ -4,7 +4,7 @@
 import git
 import subprocess
 
-# local lab classes
+# local Lab classes
 from lib.common import orchestra
 
 def update():

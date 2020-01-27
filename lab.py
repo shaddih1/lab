@@ -15,6 +15,7 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 from lib.common import orchestra
 from lib.common import message
 from lib.common import helpers
+from lib.common import menu
 
 def usage():
 	"""where we parse all our arguments"""
@@ -30,6 +31,9 @@ def usage():
 def main():
 	args = usage()
 	message.header(args.quiet)
+	if len(sys.argv) < 2:
+		menu = menu.MainMenu()
+		menu.start()
 	lab = orchestra.Conductor()
 	if args.update:
 		helpers.update()

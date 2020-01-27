@@ -7,14 +7,14 @@ import time
 import socket
 from getmac import get_mac_address
 
-# local lab classes
+# local Lab classes
 from lib.common import message
 
 class Conductor:
     """class used to filter arguments"""
     def __init__(self):
         self.complete_message = message.complete_message()
-        self.system = platform.system()
+        self.platform = platform.system()
         self.date = time.ctime(time.time())
         self.options = {
             "enable_tor" : self.enable_tor,
@@ -46,19 +46,19 @@ class Conductor:
 
     def enable_tor(self):
         """Tor (anonymity network) start and then exit"""
-        if not self.system != "Linux":
+        if not self.platform != "Linux":
             enable = subprocess.run(["service","tor","start"])
             print(f"[+] Tor has been enable at {self.date}\n")
         else:
-            print(f"[!] This option does not work on {self.system}\n")
+            print(f"[!] This option does not work on {self.platform}\n")
 
     def disable_tor(self):
         """Tor (anonymity network) stop and then exit"""
-        if not self.system != "Linux":
+        if not self.platform != "Linux":
             disable = subprocess.run(["service","tor","stop"])
             print(f"[+] Tor has been disable at {self.date}\n")
         else:
-            print(f"[!] This option does not work on {self.system}\n")
+            print(f"[!] This option does not work on {self.platform}\n")
 
     def tools(self):
         """Show all tools added in Lab"""
@@ -80,11 +80,11 @@ class Conductor:
 
     def metasploit(self):
         """Start Metasploit framework"""
-        if not self.system != "Linux":
+        if not self.platform != "Linux":
             print("[!] This option will be improved in the future.\n")
             msfconsole = subprocess.run(["msfconsole","-q"])
         else:
-            print(f"[!] This option does not work on {self.system}\n")
+            print(f"[!] This option does not work on {self.platform}\n")
 
     def more(self):
         """Show a menu with more options"""
