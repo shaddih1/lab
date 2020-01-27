@@ -16,7 +16,7 @@ def complete_message():
 def menu_input():
     """"""
     menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
-└──╼ $\n"""
+└──╼ $ """
 
     return menu_input
 

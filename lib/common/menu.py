@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import os
+import sys
 import readline
 
 # local Lab classes
@@ -58,4 +58,4 @@ class MainMenu:
         print(8)
 
     def exit(self):
-        print(9)
+        sys.exit()

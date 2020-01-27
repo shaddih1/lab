@@ -32,8 +32,8 @@ def main():
 	args = usage()
 	message.header(args.quiet)
 	if len(sys.argv) < 2:
-		interactive = menu.MainMenu()
-		interactive.start()
+		lab = menu.MainMenu()
+		lab.start()
 	lab = orchestra.Conductor()
 	if args.update:
 		helpers.update()
