@@ -29,11 +29,11 @@ class MainMenu:
         print(f"""┌──[{self.home_dir}]─[/lab/]
 └──╼ $
 
-    1 - Tor          |  6 - Buy me a coffe
-    2 - Tools        |  7 - More
-    3 - MAC address  |  8 - Credits
-    4 - Metasploit   |  9 - Exit
-    5 - Update       |  """)
+        1 - Tor          |  6 - Buy me a coffe
+        2 - Tools        |  7 - More
+        3 - MAC address  |  8 - Credits
+        4 - Metasploit   |  9 - Exit
+        5 - Update       |  """)
 
 
     def start(self):
