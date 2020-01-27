@@ -4,7 +4,7 @@
 import sys
 import os
 import readline
-import time 
+import time
 
 # local Lab classes
 from lib.common import message
@@ -48,7 +48,7 @@ class MainMenu:
                 action()
             else:
                 print(message.menu_err())
-                time.sleep(5)
+                time.sleep(2.4)
                 os.system('clear')
 
     def tor(self):
