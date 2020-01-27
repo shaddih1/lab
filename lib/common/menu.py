@@ -12,7 +12,6 @@ from lib.common import message
 class MainMenu:
 
     def __init__(self):
-        self.home_dir = message.get_home_directory()
         self.header = message.header(False)
         self.main_menu = message.main_menu()
         self.options = {
@@ -31,7 +30,6 @@ class MainMenu:
     def start(self):
         """display the menu and respond to the options"""
         while True:
-            self.main_menu()
             option = input(message.menu_input())
             action = self.options.get(option)
             if action:

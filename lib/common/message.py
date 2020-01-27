@@ -15,7 +15,7 @@ def complete_message():
     print("└──╼ $\n")
 
 def main_menu():
-    print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
+    print(f"""\n┌──[{get_home_directory()}]─[/lab/menu]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
