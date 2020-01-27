@@ -12,8 +12,6 @@ from lib.common import message
 class MainMenu:
 
     def __init__(self):
-        self.header = message.header(False)
-        self.main_menu = message.main_menu()
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -30,15 +28,15 @@ class MainMenu:
     def start(self):
         """display the menu and respond to the options"""
         while True:
-            head = self.header()
-            main_menu = self.main_menu()
+            head = message.header(False)
+            main_menu = message.main_menu()
             option = input(message.menu_input())
             action = self.options.get(option)
             if action:
                 action()
             else:
                 print(message.menu_err())
-                time.sleep(2)
+                time.sleep(1.5)
                 os.system('clear')
 
     def tor(self):
