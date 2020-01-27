@@ -25,7 +25,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
-        print(f"""┌──[{self.home_dir}]─[/lab/]
+        print(f"""\n┌──[{self.home_dir}]─[/lab/]
 └──╼ $
 
     1 - Tor          |  6 - Buy me a coffe
