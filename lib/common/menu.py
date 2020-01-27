@@ -27,7 +27,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
-        print(f"""┌──[{self.home_dir}]─[/lab/menu]
+        print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
@@ -48,7 +48,7 @@ class MainMenu:
                 action()
             else:
                 print(message.menu_err())
-                time.sleep(2.4)
+                time.sleep(2)
                 os.system('clear')
 
     def tor(self):
