@@ -24,22 +24,25 @@ def usage():
 	parser.add_argument("-u", "--update", help="check if there is a new update", action="store_true")
 	parser.add_argument("--list-options", help="list Lab's options", action="store_true")
 	parser.add_argument("--option", help="set an option to start"
-		, metavar="OPTION")
+		, metavar="<option>")
 
 	return parser.parse_args()
 
 def main():
 	args = usage()
+	# -q / --quiet
 	message.header(args.quiet)
 	if len(sys.argv) < 2:
 		lab = menu.MainMenu()
 		lab.start()
 	lab = orchestra.Conductor()
+	# -u / --update
 	if args.update:
 		helpers.update()
 	# --list-options
 	if args.list_options:
 		lab.list_options()
+	# --option <option>
 	if args.option:
 		# Fire!
 		lab.start(args.option)

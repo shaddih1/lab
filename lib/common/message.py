@@ -9,19 +9,19 @@ def get_home_directory():
     return homedir
 
 def complete_message():
-    """complete menu message"""
+    """complete lab message"""
     print(f"\n┌──[{get_home_directory()}]─[/lab/]")
     print("└──╼ $\n")
 
 def menu_input():
-    """"""
+    """menu Lab input"""
     menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
 └──╼ $ """
 
     return menu_input
 
 def menu_err():
-    """"""
+    """menu Lab error """
     error = "\n[!] This option does not exist\n"
 
     return error
