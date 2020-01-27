@@ -30,8 +30,8 @@ class MainMenu:
     def start(self):
         """display the menu and respond to the options"""
         while True:
-            head = self.header
-            main_menu = self.main_menu
+            head = self.header()
+            main_menu = self.main_menu()
             option = input(message.menu_input())
             action = self.options.get(option)
             if action:
