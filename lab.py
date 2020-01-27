@@ -21,28 +21,29 @@ def usage():
 	"""where we parse all our arguments"""
 	parser = argparse.ArgumentParser(description="Lab | Simplify your life | Ethical Hacking toolkit")
 	parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
-	parser.add_argument("-u", "--update", help="check if there is a new update", action="store_true")
+	parser.add_argument("-u", "--update", help="check if there is a new update"
+		, action="store_true")
 	parser.add_argument("--list-options", help="list Lab's options", action="store_true")
 	parser.add_argument("--option", help="set an option to start"
 		, metavar="<option>")
-
+	if len(sys.argv) < 2:
+		lab = menu.MainMenu()
+		lab.start()
 	return parser.parse_args()
 
 def main():
 	args = usage()
-	# -q / --quiet
-	message.header(args.quiet)
-	if len(sys.argv) < 2:
-		lab = menu.MainMenu()
-		lab.start()
+	if len(sys.argv) == 2:
+		if args.option:
+			print("[!] Please add more arguments")
+	else:
+		message.header(args.quiet)
 	lab = orchestra.Conductor()
-	# -u / --update
 	if args.update:
 		helpers.update()
 	# --list-options
 	if args.list_options:
 		lab.list_options()
-	# --option <option>
 	if args.option:
 		# Fire!
 		lab.start(args.option)
