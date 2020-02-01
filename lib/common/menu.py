@@ -12,7 +12,7 @@ from lib.common import message
 class MainMenu:
 
     def __init__(self):
-        self.home_dir = message.get_home_directory()
+        self.complete_message = message.complete_message()
         self.menu_error = "\n[!] This option does not exist\n"
         self.options = {
             "1" : self.tor,
@@ -28,10 +28,7 @@ class MainMenu:
         self.tools = []
 
     def main_menu(self):
-        print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
-└──╼ $
-
-        1 - Tor          |  6 - Buy me a coffe
+        print("""1 - Tor          |  6 - Buy me a coffe
         2 - Tools        |  7 - More
         3 - MAC address  |  8 - Credits
         4 - Metasploit   |  9 - Exit
@@ -53,6 +50,7 @@ class MainMenu:
 
     def tor(self):
         """Tor (anonymity network), display the tor menu and respond to the options"""
+
 
 
 
