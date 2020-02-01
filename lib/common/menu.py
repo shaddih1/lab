@@ -55,6 +55,7 @@ class MainMenu:
     def tor(self):
         """Tor (anonymity network), display the tor menu and respond to the options"""
         print(1323424)
+        input("x")
 
 
 
