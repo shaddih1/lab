@@ -12,7 +12,6 @@ from lib.common import message
 class MainMenu:
 
     def __init__(self):
-        self.complete_message = message.complete_message()
         self.home_dir = message.get_home_directory()
         self.menu_error = "\n[!] This option does not exist\n"
         self.options = {
@@ -41,21 +40,21 @@ class MainMenu:
     def start(self):
         """display the menu and respond to the options"""
         while True:
-            os.system('clear')
             head = message.header(False)
             self.main_menu()
             option = input(message.menu_input())
             action = self.options.get(option)
             if action:
+                complete_message = message.complete_message()
                 action()
             else:
                 print(self.menu_error)
                 time.sleep(1.5)
+                os.system('clear')
 
     def tor(self):
         """Tor (anonymity network), display the tor menu and respond to the options"""
-        print(1323424)
-        input("x")
+        for i in
 
 
 
