@@ -13,7 +13,7 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 
 # local lab classes
 from lib.common import orchestra
-from lib.common import messages
+from lib.common import message
 from lib.common import helpers
 from lib.common import main
 
@@ -38,8 +38,8 @@ def main():
 			print("\n[!] Please add more arguments\n")
 			sys.exit()
 	else:
-		message = message.Message()
-		message.header(args.quiet)
+
+		header = message.Message
 	lab = orchestra.Conductor()
 	if args.update:
 		helpers.update()
