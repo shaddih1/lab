@@ -54,8 +54,7 @@ class MainMenu:
 
     def tor(self):
         """Tor (anonymity network), display the tor menu and respond to the options"""
-        for i in
-
+        print(234)
 
 
     def tools(self):
