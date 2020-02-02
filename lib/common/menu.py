@@ -67,7 +67,9 @@ class MainMenu:
         exit = False
         print()
         while not exit:
-            for i, options in enumerate(self.tor):
+            clear = os.system('clear')
+            complete_message = message.complete_message()
+            for i, options in enumerate(self.tor, 1):
                 print(f"\t{i} ─ {options}")
             print("\tExit")
 
@@ -77,11 +79,9 @@ class MainMenu:
             action = self.tor.get(option)
             if action:
                 action()
-                return 
             else:
                 print(self.error)
                 sleep = time.sleep(1.5)
-                clear = os.system('clear')
 
     def tools(self):
         print(2)
