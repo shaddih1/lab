@@ -38,8 +38,7 @@ def main():
 			print("\n[!] Please add more arguments\n")
 			sys.exit()
 	else:
-
-		header = message.Message
+		header = message.header(args.quiet)
 	lab = orchestra.Conductor()
 	if args.update:
 		helpers.update()
