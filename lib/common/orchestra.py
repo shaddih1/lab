@@ -61,6 +61,9 @@ class Conductor:
         else:
             print(f"[!] This option does not work on {self.platform}\n")
 
+    def status_tor(self):
+        print("Minecraft")
+
     def tools(self):
         """Show all tools added in Lab"""
         # Loop over all tools loaded into Lab
