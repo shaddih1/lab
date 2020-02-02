@@ -74,6 +74,7 @@ class MainMenu:
             option = input(self.prompt.lower())
             exit = option == "exit"
 
+            action = self.tor.get(option)
             if action:
                 action()
             else:
