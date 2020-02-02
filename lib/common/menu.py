@@ -8,6 +8,7 @@ import time
 
 # local Lab classes
 from lib.common import message
+from lib.common import orchestra
 
 class MainMenu:
 
@@ -15,7 +16,6 @@ class MainMenu:
         self.exit = False
         self.home_dir = message.get_home_directory()
         self.prompt = message.prompt()
-        self.menu_error = "\n[!] This option does not exist\n"
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -25,7 +25,14 @@ class MainMenu:
             "6" : self.buy_me_a_coffe,
             "7" : self.more,
             "8" : self.credits,
-            "9" : self.help
+            "9" : self.about
+        }
+        self.conductor = orchestra.Conductor()
+        self.error = "\n[!] This option does not exist\n"
+        self.tor = {
+            "Enable" or "1"  : self.conductor.enable_tor(),
+            "Disable" or "2" : self.conductor.disable_tor(),
+            "Status" or "3"  : self.conductor.status_tor()
         }
         self.tools = []
 
@@ -36,11 +43,11 @@ class MainMenu:
         1 - Tor          |  6 - Buy me a coffe
         2 - Tools        |  7 - More
         3 - MAC address  |  8 - Credits
-        4 - Metasploit   |  9 - Help
+        4 - Metasploit   |  9 - About
         5 - Update       |  Exit""")
 
     def start(self):
-        """display the menu and respond to the options"""
+        """Display the menu and respond to the options"""
         while not self.exit:
             header = message.header(False)
             self.main_menu()
@@ -51,15 +58,29 @@ class MainMenu:
             action = self.options.get(option)
             if action:
                 action()
-        else:
-            print(self.menu_error)
-            time.sleep(1.5)
-            os.system('clear')
+            else:
+                print(self.menu_error)
+                sleep = time.sleep(2)
+                clear = os.system('clear')
 
     def tor(self):
-        """Tor (anonymity network)"""
-        print("unu")
+        """Tor (anonymity network) options"""
+        exit = False
+        print()
+        while not exit:
+            for i, options in enumerate(self.tor):
+                print(f"\t{i} ─ {options}")
+            print("\tExit")
 
+            option = input(self.prompt.lower())
+            exit = option == "exit"
+
+            if action:
+                action()
+            else:
+                print(self.error)
+                sleep = time.sleep(1.5)
+                clear = os.system('clear')
 
     def tools(self):
         print(2)
