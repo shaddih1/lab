@@ -103,5 +103,5 @@ class MainMenu:
     def credits(self):
         print(8)
 
-    def help(self):
+    def about(self):
         sys.exit()
