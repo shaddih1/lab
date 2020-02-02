@@ -33,6 +33,7 @@ class MainMenu:
             "Enable" or "1"  : self.conductor.enable_tor(),
             "Disable" or "2" : self.conductor.disable_tor()
         }
+        self.clear = os.system('clear')
         self.tools = []
 
     def main_menu(self):
