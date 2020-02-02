@@ -77,6 +77,7 @@ class MainMenu:
             action = self.tor.get(option)
             if action:
                 action()
+                return 
             else:
                 print(self.error)
                 sleep = time.sleep(1.5)
