@@ -31,8 +31,7 @@ class MainMenu:
         self.error = "\n[!] This option does not exist\n"
         self.tor = {
             "Enable" or "1"  : self.conductor.enable_tor(),
-            "Disable" or "2" : self.conductor.disable_tor(),
-            "Status" or "3"  : self.conductor.status_tor()
+            "Disable" or "2" : self.conductor.disable_tor()
         }
         self.tools = []
 
