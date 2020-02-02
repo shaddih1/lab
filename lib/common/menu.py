@@ -30,8 +30,10 @@ class MainMenu:
         self.conductor = orchestra.Conductor()
         self.error = "\n[!] This option does not exist\n"
         self.tor = {
-            "Enable".lower() == "1"  : self.conductor.enable_tor,
-            "Disable".lower() == "2" : self.conductor.disable_tor
+            "Enable".lower() : self.conductor.enable_tor,
+            "Disable".lower() : self.conductor.disable_tor,
+            "1" : self.conductor.enable_tor,
+            "2" : self.conductor.disable_tor
         }
         self.tools = []
         self.clear = os.system('clear')
