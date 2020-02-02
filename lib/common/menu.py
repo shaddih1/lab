@@ -45,7 +45,6 @@ class MainMenu:
             option = input(message.menu_input())
             action = self.options.get(option)
             if action:
-                complete_message = message.complete_message()
                 action()
             else:
                 print(self.menu_error)
