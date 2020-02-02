@@ -12,7 +12,9 @@ from lib.common import message
 class MainMenu:
 
     def __init__(self):
+        self.exit = False
         self.home_dir = message.get_home_directory()
+        self.prompt = message.prompt()
         self.menu_error = "\n[!] This option does not exist\n"
         self.options = {
             "1" : self.tor,
@@ -23,7 +25,7 @@ class MainMenu:
             "6" : self.buy_me_a_coffe,
             "7" : self.more,
             "8" : self.credits,
-            "9" : self.exit
+            "9" : self.help
         }
         self.tools = []
 
@@ -34,26 +36,29 @@ class MainMenu:
         1 - Tor          |  6 - Buy me a coffe
         2 - Tools        |  7 - More
         3 - MAC address  |  8 - Credits
-        4 - Metasploit   |  9 - Exit
-        5 - Update       |  """)
+        4 - Metasploit   |  9 - Help
+        5 - Update       |  Exit""")
 
     def start(self):
         """display the menu and respond to the options"""
-        while True:
-            head = message.header(False)
+        while not self.exit:
+            header = message.header(False)
             self.main_menu()
-            option = input(message.menu_input())
+
+            option = input(self.prompt.lower())
+            self.exit = option == "exit"
+
             action = self.options.get(option)
             if action:
                 action()
-            else:
-                print(self.menu_error)
-                time.sleep(1.5)
-                os.system('clear')
+        else:
+            print(self.menu_error)
+            time.sleep(1.5)
+            os.system('clear')
 
     def tor(self):
-        """Tor (anonymity network), display the tor menu and respond to the options"""
-        print(234)
+        """Tor (anonymity network)"""
+        print("unu")
 
 
     def tools(self):
@@ -77,5 +82,5 @@ class MainMenu:
     def credits(self):
         print(8)
 
-    def exit(self):
+    def help(self):
         sys.exit()

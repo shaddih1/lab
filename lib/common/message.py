@@ -14,13 +14,13 @@ def complete_message():
     print(f"\n┌──[{get_home_directory()}]─[/lab/]")
     print("└──╼ $\n")
 
-def menu_input():
+def prompt():
     """input message"""
-    menu_input = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
+    prompt = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
 └──╼ $ """
 
-    return menu_input
-    
+    return prompt
+
 # current version of lab
 lab_version = "0.0.2"
 
