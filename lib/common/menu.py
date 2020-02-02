@@ -33,8 +33,8 @@ class MainMenu:
             "Enable" or "1"  : self.conductor.enable_tor(),
             "Disable" or "2" : self.conductor.disable_tor()
         }
-        self.clear = os.system('clear')
         self.tools = []
+        self.clear = os.system('clear')
 
     def main_menu(self):
         print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
@@ -59,16 +59,15 @@ class MainMenu:
             if action:
                 action()
             else:
-                print(self.menu_error)
+                print(self.error)
                 sleep = time.sleep(2)
-                clear = os.system('clear')
+                self.clear
 
     def tor(self):
         """Tor (anonymity network) options"""
         exit = False
-        print()
         while not exit:
-            clear = os.system('clear')
+            self.clear
             complete_message = message.complete_message()
             for i, options in enumerate(self.tor, 1):
                 print(f"\t{i} ─ {options}")
