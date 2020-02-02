@@ -27,7 +27,8 @@ def usage():
 	parser.add_argument("--option", help="set an option to start"
 		, metavar="<option>")
 	if len(sys.argv) < 2:
-		lab = main.MainMenu().start()
+		lab = main.MainMenu
+		lab.start()
 	return parser.parse_args()
 
 def main():
