@@ -1,25 +1,13 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import os
+from lib.common import completer
 
-def get_home_directory():
-    """get homedir"""
-    home_dir = os.path.expanduser("~")
-
-    return home_dir
-
-def complete_message():
-    """complete message"""
-    print(f"\n┌──[{get_home_directory()}]─[/lab/]")
+def argument_message():
+    """Print Argument message"""
+    complete = complete.MainMenu()
+    print(f"\n┌──[{complete.self.get_home_directory}]─[/lab/]")
     print("└──╼ $\n")
-
-def prompt():
-    """input message"""
-    prompt = f"""\n┌──[{get_home_directory()}]─[/lab/menu]
-└──╼ $ """
-
-    return prompt
 
 # current version of lab
 lab_version = "0.0.2"

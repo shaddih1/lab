@@ -14,8 +14,8 @@ class MainMenu:
 
     def __init__(self):
         self.exit = False
-        self.home_dir = message.get_home_directory()
-        self.prompt = message.prompt()
+        self.completer = completer.MainMenuCompleter()
+        self.prompt = self.completer.prompt()
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -30,29 +30,17 @@ class MainMenu:
         self.conductor = orchestra.Conductor()
         self.error = "\n[!] This option does not exist\n"
         self.tor = {
-            "Enable".lower() : self.conductor.enable_tor,
-            "Disable".lower() : self.conductor.disable_tor,
             "1" : self.conductor.enable_tor,
             "2" : self.conductor.disable_tor
         }
         self.tools = []
         self.clear = os.system('clear')
 
-    def main_menu(self):
-        print(f"""\n┌──[{self.home_dir}]─[/lab/menu]
-└──╼ $
-
-        1 - Tor          |  6 - Buy me a coffe
-        2 - Tools        |  7 - More
-        3 - MAC address  |  8 - Credits
-        4 - Metasploit   |  9 - About
-        5 - Update       |  Exit""")
-
     def start(self):
         """Display the menu and respond to the options"""
         while not self.exit:
             header = message.header(False)
-            self.main_menu()
+            main_menu = self.completer.main_menu()
 
             option = input(self.prompt.lower())
             self.exit = option == "exit"
@@ -69,10 +57,8 @@ class MainMenu:
         """Tor (anonymity network) options"""
         exit = False
         while not exit:
-            print()
-            for i, options in enumerate(self.tor, 1):
-                print(f"\t{i} ─ {options}")
-            print("\tExit")
+            self.clear
+            tor_menu = self.completer.tor_menu()
 
             option = input(self.prompt.lower())
             exit = option == "exit"

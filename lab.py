@@ -13,9 +13,9 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 
 # local lab classes
 from lib.common import orchestra
-from lib.common import message
+from lib.common import messages
 from lib.common import helpers
-from lib.common import menu
+from lib.common import main
 
 def usage():
 	"""where we parse all our arguments"""
@@ -27,7 +27,7 @@ def usage():
 	parser.add_argument("--option", help="set an option to start"
 		, metavar="<option>")
 	if len(sys.argv) < 2:
-		lab = menu.MainMenu()
+		lab = main.MainMenu()
 		lab.start()
 	return parser.parse_args()
 
@@ -38,6 +38,7 @@ def main():
 			print("\n[!] Please add more arguments\n")
 			sys.exit()
 	else:
+		message = message.Message()
 		message.header(args.quiet)
 	lab = orchestra.Conductor()
 	if args.update:

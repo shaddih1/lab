@@ -13,7 +13,7 @@ from lib.common import message
 class Conductor:
     """class used to filter arguments"""
     def __init__(self):
-        self.complete_message = message.complete_message()
+        self.complete_message = message.argument_message()
         self.platform = platform.system()
         self.date = time.ctime(time.time())
         self.options = {
@@ -40,6 +40,7 @@ class Conductor:
     def start(self, args):
         """respond to options"""
         action = self.options.get(args.lower())
+        
         if action:
             action()
         else:
