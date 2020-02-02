@@ -30,7 +30,7 @@ class MainMenu:
         self.conductor = orchestra.Conductor()
         self.error = "\n[!] This option does not exist\n"
         self.tor = {
-            "Enable" or "1"  : self.conductor.enable_tor,
+            "Enable".lower() or "1"  : self.conductor.enable_tor,
             "Disable" or "2" : self.conductor.disable_tor
         }
         self.tools = []
@@ -67,8 +67,7 @@ class MainMenu:
         """Tor (anonymity network) options"""
         exit = False
         while not exit:
-            self.clear
-            complete_message = message.complete_message()
+            print()
             for i, options in enumerate(self.tor, 1):
                 print(f"\t{i} ─ {options}")
             print("\tExit")
