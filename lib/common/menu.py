@@ -8,7 +8,7 @@ import os
 from lib.common import helpers
 from lib.common import message
 
-class Menu:
+class MainMenu:
     """\n┌──[MainMenu]─[/lab/]
 └──╼ $
 
