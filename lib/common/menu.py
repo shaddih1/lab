@@ -34,7 +34,7 @@ class MainMenu:
         }
         self.tor_options = {
             "1" : Tor().enable(),
-            "2" : Tor().disable()
+            "2" : Tor().disable(),
             "3" : Tor().status()
         }
 
