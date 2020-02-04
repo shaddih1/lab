@@ -95,11 +95,11 @@ class MainMenu:
 
 class Tor:
 
-    def enable():
+    def enable(self):
         print("enable")
 
-    def disable():
+    def disable(self):
         print("disable")
 
-    def status():
+    def status(selfs):
         print("status")
