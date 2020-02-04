@@ -50,9 +50,9 @@ class MainMenu:
             if action:
                 action()
             else:
-                print("error")
-                sleep = self.sleep
-                clear = self.clear
+                error = print("error")
+                self.sleep()
+                self.clear()
         else:
             sys.exit(0)
 
