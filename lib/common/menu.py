@@ -35,7 +35,7 @@ class MainMenu:
         self.clear = os.system('clear')
 
     def start(self):
-        f"""\n┌──[{self.home_dir}]─[/lab/menu]
+        """\n┌──[MainMenu]─[/lab/menu]
 └──╼ $ """
         exit = False
         while not exit:
@@ -49,10 +49,10 @@ class MainMenu:
             action = self.options.get(option)
             if action:
                 action()
-            else:
-                error = print("bye")
-                self.sleep
-                self.clear
+        else:
+            error = print("bye")
+            self.sleep
+            self.clear
 
     def tor(self):
         f"""\n┌──[{self.home_dir}]─[/lab/menu]
