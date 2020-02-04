@@ -36,6 +36,7 @@ class MainMenu:
         exit = False
         while not exit:
             clear = os.system('clear')
+            
             header = message.header(False)
             main_menu = print(self.menu)
             prompt = self.start.__doc__
