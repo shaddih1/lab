@@ -52,7 +52,7 @@ class MainMenu:
                 sleep = time.sleep(1.5)
                 clear = os.system('clear')
         else:
-            break 
+            sys.exit()
 
     def tor(self):
         f"""\n┌──[Main Menu]─[/lab/tor]
