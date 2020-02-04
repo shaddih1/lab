@@ -39,7 +39,7 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
-            self.header()
+            self.header
             main_menu = print(self.menu)
             prompt = self.start.__doc__
 
