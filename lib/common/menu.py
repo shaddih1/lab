@@ -12,11 +12,11 @@ class MainMenu:
     """\n┌──[Main Menu]─[/lab/]
 └──╼ $
 
-        1 - Tor          |  6 - Buy me a coffe
-        2 - Tools        |  7 - More
-        3 - MAC address  |  8 - Credits
-        4 - Metasploit   |  Exit
-        5 - Update       |  """
+        1 ─ Tor          │  6 ─ Buy me a coffe
+        2 ─ Tools        │  7 ─ More
+        3 ─ MAC address  │  8 ─ Credits
+        4 ─ Metasploit   │  Exit
+        5 ─ Update       │  """
     def __init__(self):
         self.menu = MainMenu.__doc__
         self.options = {
@@ -35,8 +35,6 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
-            clear = os.system('clear')
-            
             header = message.header(False)
             main_menu = print(self.menu)
             prompt = self.start.__doc__
@@ -54,11 +52,11 @@ class MainMenu:
         f"""\n┌──[Main Menu]─[/lab/tor]
 └──╼ $
 
-        1 - Enable
-        2 - Disable
-        3 - Status
+        1 ─ Enable
+        2 ─ Disable
+        3 ─ Status
         Exit"""
-        print("tor")
+        print(self.tor.__doc__)
 
     def tools(self):
         print("tools")
