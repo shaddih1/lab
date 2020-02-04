@@ -21,7 +21,7 @@ class MainMenu:
         self.home_dir = helpers.get_home_dir()
         self.header = message.header(False)
         self.menu = MainMenu.__doc__
-        self.prompt = self.start.__doc__
+        self.prompt = start().__doc__
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -40,7 +40,7 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
-            header = print(self.header)
+            self.header
             main_menu = print(self.menu)
 
             option = input(self.prompt).lower()
