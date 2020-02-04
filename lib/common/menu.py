@@ -3,6 +3,7 @@
 # standar python library
 import time
 import os
+import sys
 
 # local Lab classes
 from lib.common import helpers
@@ -18,7 +19,6 @@ class MainMenu:
         4 - Metasploit   |  Exit
         5 - Update       |  """
     def __init__(self):
-        self.home_dir = helpers.get_home_dir()
         self.header = message.header(False)
         self.menu = MainMenu.__doc__
         self.options = {
@@ -39,7 +39,6 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
-            self.header
             main_menu = print(self.menu)
             prompt = self.start.__doc__
 
@@ -49,10 +48,12 @@ class MainMenu:
             action = self.options.get(option)
             if action:
                 action()
+            else:
+                print("error")
+                self.sleep
+                self.clear
         else:
-            error = print("bye")
-            self.sleep
-            self.clear
+            sys.exit(0)
 
     def tor(self):
         f"""\n┌──[{self.home_dir}]─[/lab/menu]
