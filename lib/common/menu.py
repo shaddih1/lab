@@ -20,6 +20,7 @@ class MainMenu:
         5 - Update       |  """
     def __init__(self):
         self.menu = MainMenu.__doc__
+        self.sleep = time.sleep(1.5)
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -48,7 +49,7 @@ class MainMenu:
                 action()
             else:
                 error = print("error")
-                sleep = time.sleep(1.5)
+                self.sleep
                 clear = os.system('clear')
         else:
             sys.exit()
