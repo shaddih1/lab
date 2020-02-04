@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import time
-import os
 import sys
+import os
 
 # local Lab classes
 from lib.common import helpers
@@ -36,6 +35,7 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
+            clear = os.system('clear')
             header = message.header(False)
             main_menu = print(self.menu)
             prompt = self.start.__doc__
