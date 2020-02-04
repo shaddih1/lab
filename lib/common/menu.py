@@ -57,7 +57,8 @@ class MainMenu:
         2 ─ Disable
         3 ─ Status
         Exit"""
-        print(self.tor.__doc__)
+        tor_menu = self.tor.__doc__
+        print(tor_menu)
 
     def tools(self):
         print("tools")
