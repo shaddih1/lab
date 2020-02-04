@@ -3,6 +3,7 @@
 # standar python library
 import sys
 import os
+import readline
 
 # local Lab classes
 from lib.common import helpers
