@@ -62,7 +62,7 @@ class MainMenu:
         Exit"""
         exit = False
         while not exit:
-            menu = self.tor.__doc__)
+            menu = self.tor.__doc__
             tor_menu = print(menu)
 
             option = input(self.prompt).lower()
