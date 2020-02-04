@@ -55,7 +55,7 @@ class Menu:
                 self.clear
 
     def tor(self):
-            f"""\n┌──[{self.home_dir}]─[/lab/menu]
+        f"""\n┌──[{self.home_dir}]─[/lab/menu]
 └──╼ $
 
         1 - Enable
