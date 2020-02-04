@@ -15,7 +15,7 @@ if not sys.version_info.major == 3 and sys.version_info.minor >= 6:
 from lib.common import orchestra
 from lib.common import message
 from lib.common import helpers
-from lib.common import main
+from lib.common import menu
 
 def usage():
 	"""Where we parse all our arguments"""
@@ -27,7 +27,8 @@ def usage():
 	parser.add_argument("--option", help="set an option to start"
 		, metavar="<option>")
 	if len(sys.argv) < 2:
-		lab = main.MainMenu.self.start()
+		lab = menu.MainMenu()
+		lab = lab.start()
 	return parser.parse_args()
 
 def main():
