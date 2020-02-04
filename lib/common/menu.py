@@ -71,6 +71,8 @@ class MainMenu:
             action = self.tor_options.get(option)
             if action:
                 action()
+            else:
+                clear 
 
     def tools(self):
         print("tools")
