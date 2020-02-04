@@ -19,7 +19,9 @@ class MainMenu:
         4 ─ Metasploit   │  Exit
         5 ─ Update       │  """
     def __init__(self):
+        self.exit = False
         self.menu = MainMenu.__doc__
+        self.prompt = message.prompt()
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
@@ -30,35 +32,45 @@ class MainMenu:
             "7" : self.more,
             "8" : self.credits
         }
+        self.tor_options = {
+            "1" : Tor().enable(),
+            "2" : Tor().disable()
+            "3" : Tor().status()
+        }
 
     def start(self):
-        """\n┌──[Main Menu]─[/lab/]
-└──╼ $ """
-        exit = False
-        while not exit:
+        while not self.exit:
             header = message.header(False)
             main_menu = print(self.menu)
-            prompt = self.start.__doc__
 
-            option = input(prompt).lower()
-            exit = option == "exit"
+            option = input(self.prompt).lower()
+            self.exit = option == "exit"
 
             action = self.options.get(option)
             if action:
                 action()
         else:
-            sys.exit()
+            sys.exit(0)
 
     def tor(self):
-        f"""\n┌──[Main Menu]─[/lab/tor]
+        """\n┌──[Main Menu]─[/lab/tor]
 └──╼ $
 
         1 ─ Enable
         2 ─ Disable
         3 ─ Status
         Exit"""
-        tor_menu = self.tor.__doc__
-        print(tor_menu)
+        exit = False
+        clear = os.system('clear')
+        while not exit:
+            tor_menu = self.tor.__doc__
+
+            option = input(self.prompt).lower()
+            exit = option == "exit"
+
+            action = self.tor_options.get(option)
+            if action:
+                action()
 
     def tools(self):
         print("tools")
@@ -80,3 +92,14 @@ class MainMenu:
 
     def credits(self):
         print("credits")
+
+class Tor:
+
+    def enable():
+        print("enable")
+
+    def disable():
+        print("disable")
+
+    def status():
+        print("status")

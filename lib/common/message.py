@@ -3,11 +3,17 @@
 # local Lab classes
 from lib.common import helpers
 
+# get home directory
+home_dir = helpers.get_home_dir()
+
 def argument_message():
-    """Print Argument message"""
-    home_dir = helpers.get_home_dir()
     print(f"\n┌──[{home_dir}]─[/lab/]")
     print("└──╼ $\n")
+
+def prompt():
+    prompt = f"""\n┌──[{home_dir}]─[/lab/]
+└──╼ $ """
+    return prompt
 
 # current version of lab
 lab_version = "0.0.3"
