@@ -46,10 +46,6 @@ class MainMenu:
             action = self.options.get(option)
             if action:
                 action()
-            else:
-                error = print("error")
-                sleep =  time.sleep(1.5)
-                clear = os.system('clear')
         else:
             sys.exit()
 
