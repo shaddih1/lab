@@ -10,7 +10,7 @@ from lib.common import message
 
 class MainMenu:
 
-    """\n┌──[]─[/lab/menu]
+    """\n┌──[MainMenu]─[/lab/]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
