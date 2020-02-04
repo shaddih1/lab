@@ -51,8 +51,8 @@ class MainMenu:
                 action()
             else:
                 print("error")
-                self.sleep
-                self.clear
+                sleep = self.sleep
+                clear = self.clear
         else:
             sys.exit(0)
 
