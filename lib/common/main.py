@@ -64,25 +64,25 @@ class MainMenu:
         2 - Disable
         3 - Status
         Exit"""
-        print(1)
+        print("tor")
 
     def tools(self):
-        print(2)
+        print("tools")
 
     def mac_address(self):
-        print(3)
+        print("mac")
 
     def metasploit(self):
-        print(4)
+        print("metasploit")
 
     def update(self):
-        print(5)
+        print("update")
 
     def buy_me_a_coffe(self):
-        print(6)
+        print("buy me a coffe")
 
     def more(self):
-        print(7)
+        print("more")
 
     def credits(self):
-        print(8)
+        print("credits")
