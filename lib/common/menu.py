@@ -63,7 +63,8 @@ class MainMenu:
         exit = False
         clear = os.system('clear')
         while not exit:
-            tor_menu = print(self.tor.__doc__)
+            menu = self.tor.__doc__)
+            tor_menu = print(menu)
 
             option = input(self.prompt).lower()
             exit = option == "exit"
@@ -72,7 +73,7 @@ class MainMenu:
             if action:
                 action()
             else:
-                clear 
+                clear
 
     def tools(self):
         print("tools")
