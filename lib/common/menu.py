@@ -31,8 +31,6 @@ class MainMenu:
             "7" : self.more,
             "8" : self.credits
         }
-        self.sleep = time.sleep(1.5)
-        self.clear = os.system('clear')
 
     def start(self):
         """\n┌──[MainMenu]─[/lab/menu]
@@ -51,8 +49,8 @@ class MainMenu:
                 action()
             else:
                 error = print("error")
-                self.sleep()
-                self.clear()
+                sleep = time.sleep(1.5)
+                clear = os.system('clear')
         else:
             sys.exit(0)
 
