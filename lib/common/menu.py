@@ -19,7 +19,6 @@ class MainMenu:
         4 - Metasploit   |  Exit
         5 - Update       |  """
     def __init__(self):
-        self.header = message.header(False)
         self.menu = MainMenu.__doc__
         self.options = {
             "1" : self.tor,
@@ -37,7 +36,7 @@ class MainMenu:
 └──╼ $ """
         exit = False
         while not exit:
-            header = self.header
+            header = message.header(False)
             main_menu = print(self.menu)
             prompt = self.start.__doc__
 
