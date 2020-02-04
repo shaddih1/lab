@@ -10,7 +10,7 @@ from lib.common import helpers
 from lib.common import message
 
 class MainMenu:
-    """\n┌──[MainMenu]─[/lab/]
+    """\n┌──[Main Menu]─[/lab/]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
@@ -33,7 +33,7 @@ class MainMenu:
         }
 
     def start(self):
-        """\n┌──[MainMenu]─[/lab/menu]
+        """\n┌──[Main Menu]─[/lab/]
 └──╼ $ """
         exit = False
         while not exit:
@@ -55,13 +55,14 @@ class MainMenu:
             sys.exit(0)
 
     def tor(self):
-        f"""\n┌──[{self.home_dir}]─[/lab/menu]
+        f"""\n┌──[Main Menu]─[/lab/tor]
 └──╼ $
 
         1 - Enable
         2 - Disable
         3 - Status
         Exit"""
+        print("tor")
 
     def tools(self):
         print("tools")
