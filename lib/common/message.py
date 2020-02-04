@@ -5,7 +5,7 @@ from lib.common import completer
 
 def argument_message():
     """Print Argument message"""
-    complete = completer.MainMenu()
+    complete = completer.MainMenuCompleter()
     print(f"\n┌──[{complete.self.get_home_directory}]─[/lab/]")
     print("└──╼ $\n")
 
