@@ -1,95 +1,86 @@
 # -*- coding: utf-8 -*-
 
 # standar python library
-import sys
-import os
-import readline
 import time
+import os
 
 # local Lab classes
+from lib.common import helpers
 from lib.common import message
-from lib.common import orchestra
 
 class MainMenu:
+    f"""\n┌──[{self.home_dir}]─[/lab/menu]
+└──╼ $
 
-    def __init__(self):
-        self.exit = False
-        self.completer = completer.MainMenuCompleter()
-        self.prompt = self.completer.prompt()
-        self.options = {
-            "1" : self.tor,
-            "2" : self.tools,
-            "3" : self.mac_address,
-            "4" : self.metasploit,
-            "5" : self.update,
-            "6" : self.buy_me_a_coffe,
-            "7" : self.more,
-            "8" : self.credits,
-            "9" : self.about
-        }
-        self.conductor = orchestra.Conductor()
-        self.error = "\n[!] This option does not exist\n"
-        self.tor = {
-            "1" : self.conductor.enable_tor,
-            "2" : self.conductor.disable_tor
-        }
-        self.tools = []
-        self.clear = os.system('clear')
+        1 - Tor          |  6 - Buy me a coffe
+        2 - Tools        |  7 - More
+        3 - MAC address  |  8 - Credits
+        4 - Metasploit   |  Exit
+        5 - Update       |  """
+        def __init__(self):
+            self.home_dir = helpers.get_home_dir()
+            self.header = message.header(False)
+            self.menu = MainMenu.__doc__
+            self.prompt = self.start.__doc__
+            self.options = {
+                "1" : self.tor,
+                "2" : self.tools,
+                "3" : self.mac_address,
+                "4" : self.metasploit,
+                "5" : self.update,
+                "6" : self.buy_me_a_coffe,
+                "7" : self.more,
+                "8" : self.credits
+            }
+            self.sleep = time.sleep(1.5)
+            self.clear = os.system('clear')
 
-    def start(self):
-        """Display the menu and respond to the options"""
-        while not self.exit:
-            header = message.header(False)
-            main_menu = self.completer.main_menu()
+        def start(self):
+            f"""\n┌──[{self.home_dir}]─[/lab/menu]
+    └──╼ $ """
+            exit = False
+            while not exit:
+                header = print(self.header)
+                main_menu = print(self.menu)
 
-            option = input(self.prompt.lower())
-            self.exit = option == "exit"
+                option = input(self.prompt.lower())
+                exit = option == "exit"
 
-            action = self.options.get(option)
-            if action:
-                action()
-            else:
-                print(self.error)
-                sleep = time.sleep(2)
-                self.clear
+                action = self.options.get(option)
+                if action:
+                    action()
+                else:
+                    error = print("bye")
+                    self.sleep
+                    self.clear
 
-    def tor(self):
-        """Tor (anonymity network) options"""
-        exit = False
-        while not exit:
-            self.clear
-            tor_menu = self.completer.tor_menu()
+        def tor(self):
+            f"""\n┌──[{self.home_dir}]─[/lab/menu]
+        └──╼ $
 
-            option = input(self.prompt.lower())
-            exit = option == "exit"
+                1 - Enable
+                2 - Disable
+                3 - Status
+                Exit"""
+            print(1)
 
-            action = self.tor.get(option)
-            if action:
-                action()
-            else:
-                print(self.error)
-                sleep = time.sleep(1.5)
+        def tools(self):
+            print(2)
 
-    def tools(self):
-        print(2)
+        def mac_address(self):
+            print(3)
 
-    def mac_address(self):
-        print(3)
+        def metasploit(self):
+            print(4)
 
-    def metasploit(self):
-        print(4)
+        def update(self):
+            print(5)
 
-    def update(self):
-        print(5)
+        def buy_me_a_coffe(self):
+            print(6)
 
-    def buy_me_a_coffe(self):
-        print(6)
+        def more(self):
+            print(7)
 
-    def more(self):
-        print(7)
-
-    def credits(self):
-        print(8)
-
-    def about(self):
-        sys.exit()
+        def credits(self):
+            print(8)

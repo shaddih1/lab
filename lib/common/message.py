@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# standar python library
-from lib.common import completer
+# local Lab classes
+from lib.common import helpers
 
 def argument_message():
     """Print Argument message"""
-    complete = completer.MainMenuCompleter()
-    print(f"\n┌──[{complete.self.get_home_directory}]─[/lab/]")
+    home_dir = helpers.get_home_dir()
+    print(f"\n┌──[{home_dir}]─[/lab/]")
     print("└──╼ $\n")
 
 # current version of lab

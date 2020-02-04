@@ -3,9 +3,9 @@
 # standar python library
 import git
 import subprocess
+import os
 
 # local Lab classes
-from lib.common import orchestra
 
 def update():
     try:
@@ -13,3 +13,8 @@ def update():
         git.pull()
     except:
         output = subprocess.check_output(["git", "pull"])
+
+def get_home_dir():
+    home_dir = os.path.expanduser("~")
+
+    return home_dir
