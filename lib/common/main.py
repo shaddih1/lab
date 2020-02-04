@@ -10,7 +10,7 @@ from lib.common import message
 
 class MainMenu:
 
-    f"""\n┌──[{self.home_dir}]─[/lab/menu]
+    """\n┌──[]─[/lab/menu]
 └──╼ $
 
         1 - Tor          |  6 - Buy me a coffe
