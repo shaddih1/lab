@@ -61,7 +61,6 @@ class MainMenu:
         3 ─ Status
         Exit"""
         exit = False
-        clear = os.system('clear')
         while not exit:
             menu = self.tor.__doc__)
             tor_menu = print(menu)
@@ -73,7 +72,7 @@ class MainMenu:
             if action:
                 action()
             else:
-                clear
+                clear = os.system('clear')
 
     def tools(self):
         print("tools")
