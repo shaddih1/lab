@@ -11,8 +11,7 @@ from lib.common import message
 
 class MainMenu:
     """\n┌──[Menu]─[/lab/]
-└──╼ $
-
+└──╼ $\n
         1 ─ Tor          │  6 ─ Buy me a coffe
         2 ─ Tools        │  7 ─ More
         3 ─ MAC address  │  8 ─ Credits
@@ -54,8 +53,7 @@ class MainMenu:
 
     def tor(self):
         """\n┌──[Menu]─[/lab/tor]
-└──╼ $
-
+└──╼ $\n
         1 ─ Enable
         2 ─ Disable
         3 ─ Status
