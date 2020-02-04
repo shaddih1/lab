@@ -8,8 +8,7 @@ import os
 from lib.common import helpers
 from lib.common import message
 
-class MainMenu:
-
+class Menu:
     """\n┌──[MainMenu]─[/lab/]
 └──╼ $
 
@@ -37,7 +36,6 @@ class MainMenu:
         self.clear = os.system('clear')
 
     def start(self):
-
         f"""\n┌──[{self.home_dir}]─[/lab/menu]
 └──╼ $ """
         exit = False
