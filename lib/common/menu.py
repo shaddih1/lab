@@ -43,7 +43,7 @@ class MainMenu:
             header = print(self.header)
             main_menu = print(self.menu)
 
-            option = input(self.prompt.lower())
+            option = input(self.prompt).lower()
             exit = option == "exit"
 
             action = self.options.get(option)
