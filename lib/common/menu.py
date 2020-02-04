@@ -21,7 +21,7 @@ class MainMenu:
         self.home_dir = helpers.get_home_dir()
         self.header = message.header(False)
         self.menu = MainMenu.__doc__
-        self.prompt = start().__doc__
+        self.prompt = self.start().__doc__
         self.options = {
             "1" : self.tor,
             "2" : self.tools,
