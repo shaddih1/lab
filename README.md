@@ -1,6 +1,8 @@
 # Lab
 
+![version](https://img.shields.io/badge/version-0.0.2-red.svg)
 ![language](https://img.shields.io/badge/language-python-blue.svg)
+[![GitHub license](https://img.shields.io/github/license/shaddih1/BookExtracting.svg)]
 
 # About
      ██▓    ▄▄▄       ▄▄▄▄
