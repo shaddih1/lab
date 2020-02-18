@@ -7,8 +7,10 @@ from lib.common import helpers
 home_dir = helpers.get_home_dir()
 
 def argument_message():
-    print(f"\n┌──[{home_dir}]─[/lab/]")
-    print("└──╼ $\n")
+    message = f'''\n┌──[{home_dir}]─[/lab/]
+└──╼ $\n'''
+
+    return message
 
 def prompt():
     prompt = f"""\n┌──[{home_dir}]─[/lab/]
