@@ -121,7 +121,7 @@ class MainMenu:
         Exit"""
         metasploit_options = {
             '1' : self.conductor.metasploit,
-            '2' : self.tools.easysploit
+            '2' : self.tool.easysploit
         }
         exit = False
         while not exit:
@@ -168,7 +168,7 @@ class MainMenu:
             clear_scr()
 
     def more(self):
-        print("more")
+        print("\nComing soon\n")
 
     def credits(self):
         """\n┌──[Menu]─[/lab/credits]
