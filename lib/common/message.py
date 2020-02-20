@@ -18,7 +18,7 @@ def prompt():
     return prompt
 
 # current version of lab
-lab_version = "0.0.3"
+lab_version = "0.0.2"
 
 def header(quiet):
     """Print the header, with version"""
@@ -29,7 +29,7 @@ def header(quiet):
  ▒██░   ░██▄▄▄▄██ ▒██░█▀         Made with <3 by Shady H
  ░██████▒▓█   ▓██▒░▓█  ▀█▓
  ░ ▒░▓  ░▒▒   ▓▒█░░▒▓███▀▒
- ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░          Simplify your life
-   ░ ░    ░   ▒    ░    ░
+ ░ ░ ▒  ░ ▒   ▒▒ ░▒░▒   ░          Pentesting tools
+   ░ ░    ░   ▒    ░    ░        Thanks for using Lab
      ░  ░     ░  ░ ░
                         ░""")
