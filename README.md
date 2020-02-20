@@ -35,7 +35,7 @@
 
      usage: lab.py [-h] [-q] [-u] [--list-options] [--option <option>]
 
-     Lab | Simplify your life | Ethical Hacking toolkit
+     Lab | Ethical Hacking toolkit
 
      optional arguments:
        -h, --help         show this help message and exit
@@ -43,6 +43,7 @@
        -u, --update       check if there is a new update
        --list-options     list Lab's options
        --option <option>  set an option to start
+Or
       
       $ python3 lab.py
 
