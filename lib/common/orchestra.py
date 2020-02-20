@@ -10,7 +10,7 @@ from getmac import get_mac_address
 # local Lab classes
 from lib.common import message
 from lib.common import helpers
-from tools import tools
+from lib.common import tools
 
 class Conductor:
     """class used to filter arguments"""
