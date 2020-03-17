@@ -23,8 +23,8 @@ def usage():
 	parser.add_argument("-q", "--quiet", help="suppress header", action="store_true")
 	parser.add_argument("-u", "--update", help="check if there is a new update"
 		, action="store_true")
-	parser.add_argument("--list-options", help="list Lab's options", action="store_true")
-	parser.add_argument("--option", help="set an option to start"
+	parser.add_argument("-l", "--list-options", help="list Lab's options", action="store_true")
+	parser.add_argument("-o", "--option", help="set an option to start"
 		, metavar="<option>")
 	if len(sys.argv) < 2:
 		lab = utils.MainMenu()

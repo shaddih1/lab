@@ -8,7 +8,7 @@ home_dir = helpers.get_home_dir()
 
 def argument_message():
     message = f'''\n┌──[{home_dir}]─[/lab/]
-└──╼ $\n'''
+└──╼ $'''
 
     return message
 

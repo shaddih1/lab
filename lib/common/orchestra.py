@@ -30,14 +30,14 @@ class Conductor:
         }
         self.local_ip = socket.gethostbyname(socket.gethostname())
         self.mac = get_mac_address()
-        self.doesnt_work_on = f"[!] This option does not work on {self.platform}\n"
+        self.doesnt_work_on = f"\n[!] This option does not work on {self.platform}\n"
 
     def list_options(self):
         """Show all argument options added in Lab"""
         print(self.complete_message)
         # Loop over all options loaded into Lab
         for i, options in enumerate(self.options):
-            print(f"\t{options} ─ {self.options.get(options).__doc__}")
+            print(f"\n\t{options} ─ {self.options.get(options).__doc__}")
         print()
 
     def start(self, args):
@@ -54,7 +54,7 @@ class Conductor:
         """Tor (anonymity network) start and then exit"""
         if not self.platform != "Linux":
             enable = subprocess.run(["service","tor","start"])
-            print(f"[+] Tor has been enable at {self.date}\n")
+            print(f"\n[+] Tor has been enable at {self.date}\n")
         else:
             print(self.doesnt_work_on)
 
@@ -62,7 +62,7 @@ class Conductor:
         """Tor (anonymity network) stop and then exit"""
         if not self.platform != "Linux":
             disable = subprocess.run(["service","tor","stop"])
-            print(f"[+] Tor has been disable at {self.date}\n")
+            print(f"\n[+] Tor has been disable at {self.date}\n")
         else:
             print(self.doesnt_work_on)
 
@@ -80,20 +80,20 @@ class Conductor:
 
     def view_mac(self):
         """Show your MAC address and then exit"""
-        print(f"[+] Host\t{self.local_ip}\tMAC\t{self.mac}\n")
+        print(f"\n[+] Host\t{self.local_ip}\tMAC\t{self.mac}\n")
 
     def change_mac(self):
         """Change your MAC address and then exit"""
-        print("Coming Soon\n")
+        print("\nComing Soon\n")
 
     def metasploit(self):
         """Start Metasploit framework"""
         if not self.platform != "Linux":
-            print("[!] This option will be improved in the future.\n")
+            print("\n[*] This option will be improved in the future.\n[!] Wait...\n")
             msfconsole = subprocess.run(["msfconsole","-q"])
         else:
-            print(f"[!] This option does not work on {self.platform}\n")
+            print(f"\n[!] This option does not work on {self.platform}\n")
 
     def more(self):
         """Show a menu with more options"""
-        print("Coming Soon\n")
+        print("\nComing Soon\n")

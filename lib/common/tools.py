@@ -55,28 +55,28 @@ class Tool:
 			clear = os.system('clear')
 
 	def findomain(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def eagleeye(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def easysploit(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def scanqli(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def sqlmap(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def shellphish(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def qrljacker(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def socialbox(self):
-		print('coming soon')
+		print('\ncoming soon\n')
 
 	def rapidscan(self):
-		print('coming soon')
+		print('\ncoming soon\n')
