@@ -25,7 +25,7 @@
         4 ─ Metasploit   │  Exit
         5 ─ Update       │
  
- # Installation in Linux 
+ # Installing on Linux 
  
   - `$ git clone https://github.com/shaddih1/lab.git`
   - `$ cd lab`
